@@ -1,0 +1,69 @@
+object PageLayout: TPageLayout
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 568
+  ClientWidth = 856
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object lytContainer: TLayout
+    Align = Client
+    Size.Width = 856.000000000000000000
+    Size.Height = 568.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    object recBackground: TRectangle
+      Align = Contents
+      Fill.Color = xFFF4F3EF
+      Size.Width = 856.000000000000000000
+      Size.Height = 568.000000000000000000
+      Size.PlatformDefault = False
+      Stroke.Kind = None
+    end
+    object lytMain: TLayout
+      Align = Client
+      Margins.Left = 60.000000000000000000
+      Size.Width = 796.000000000000000000
+      Size.Height = 568.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      object lyt2: TLayout
+        Align = Top
+        Size.Width = 796.000000000000000000
+        Size.Height = 60.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        object Btn1: TButton
+          Position.X = 256.000000000000000000
+          Position.Y = 24.000000000000000000
+          TabOrder = 0
+          Text = 'Btn1'
+        end
+      end
+      object lytBody: TLayout
+        Align = Client
+        Size.Width = 796.000000000000000000
+        Size.Height = 508.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+      end
+    end
+    object mltvw1: TMultiView
+      MasterButton = Btn1
+      NavigationPaneOptions.CollapsedWidth = 80.000000000000000000
+      Size.Width = 250.000000000000000000
+      Size.Height = 50.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      object lyt1: TLayout
+        Align = Client
+        Size.Width = 80.000000000000000000
+        Size.Height = 568.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+      end
+    end
+  end
+end

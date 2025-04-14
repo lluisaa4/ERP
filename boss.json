@@ -1,0 +1,13 @@
+{
+	"name": "ac-erp",
+	"description": "",
+	"version": "1.0.0",
+	"homepage": "",
+	"mainsrc": "./src",
+	"projects": [],
+	"dependencies": {
+		"github.com/academiadocodigo/tbgwebcharts": "^1.0.0",
+		"https://github.com/academiadocodigo/localcache4d": "^1.0.4",
+		"https://github.com/bittencourtthulio/router4delphi": "^1.1.3"
+	}
+}

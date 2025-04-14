@@ -1,0 +1,37 @@
+Cadastros
+	Empresa
+	Mercadorias
+	Pessoas
+	Caixa
+	Turno
+	------
+	Configuração do Caixa
+
+Tebelas
+	Uf
+	Cidade
+	-----
+	Formas de Pagamentos
+	-----
+	Tabelas IBPT
+	CFOP
+	-----
+	Unidades
+
+NFC-e
+	Consultar Status do Serviço
+	Consultar NFC-e Emitidas
+	Enviar XMLs para Contabilidade
+	------
+	Inutilização de Numeração
+
+Caixa Diário
+	Consultar Movimentação de Caixa
+
+Relatórios
+	
+
+
+-----------------------------------------------
+Layout ERP
+https://demos.creative-tim.com/paper-dashboard-pro-react/?_ga=2.268153166.1771291006.1689254107-1969382654.1689085198#/admin/dashboard

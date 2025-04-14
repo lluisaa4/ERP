@@ -1,0 +1,138 @@
+unit acerp.view.componentes.edits;
+
+interface
+
+uses
+  System.SysUtils,
+  System.Types,
+  System.UITypes,
+  System.Classes,
+  System.Variants,
+  FMX.Types,
+  FMX.Graphics,
+  FMX.Controls,
+  FMX.Forms,
+  FMX.Dialogs,
+  FMX.StdCtrls,
+  FMX.Controls.Presentation,
+  FMX.Layouts,
+  FMX.Edit,
+  FMX.Objects,
+  FMX.Effects,
+  acerp.view.components.interfaces;
+
+type
+  TComponentEdit = class(TFrame, iEdits)
+    lytContainer: TLayout;
+    lblTitulo: TLabel;
+    rctngl1: TRectangle;
+    edt1: TEdit;
+    shdwfct1: TShadowEffect;
+  private
+    { Private declarations }
+  public
+    class function New(AWOner: TComponent): iEdits;
+    function Nome(Value: string): iEdits;
+    function Text(Value: string): iEdits;
+    function FontColor(Value: TAlphaColor = $FFFFFFFF): iEdits;
+    function BackGroundColor(Value: TAlphaColor = $FFFFFFFF): iEdits;
+    function Enable(Value: Boolean = False): iEdits;
+    function Change(Value: TProc<TObject>): iEdits;
+    function Alinhamento(Value: TAlignLayout): iEdits;
+    function VertText(Value: TTextAlign): iEdits;
+    function HorzText(Value: TTextAlign): iEdits;
+    function Largura(Value: Integer): iEdits;
+    function Margem(Value: TEditMargins): iEdits;
+    function Titulo(Value: string): iEdits;
+    function FontColorTitulo(Value: TAlphaColor = $FFE3E3E3): iEdits;
+    function PlaceHolder(Value: string): iEdits;
+    function Build: TFMXObject;
+  end;
+
+implementation
+
+{$R *.fmx}
+
+{ TComponentEdit }
+
+function TComponentEdit.Alinhamento(Value: TAlignLayout): iEdits;
+begin
+  Result := self;
+end;
+
+function TComponentEdit.BackGroundColor(Value: TAlphaColor): iEdits;
+begin
+
+end;
+
+function TComponentEdit.Build: TFMXObject;
+begin
+
+end;
+
+function TComponentEdit.Change(Value: TProc<TObject>): iEdits;
+begin
+
+end;
+
+function TComponentEdit.Enable(Value: Boolean): iEdits;
+begin
+
+end;
+
+function TComponentEdit.FontColor(Value: TAlphaColor): iEdits;
+begin
+
+end;
+
+function TComponentEdit.FontColorTitulo(Value: TAlphaColor): iEdits;
+begin
+
+end;
+
+function TComponentEdit.HorzText(Value: TTextAlign): iEdits;
+begin
+
+end;
+
+function TComponentEdit.Largura(Value: Integer): iEdits;
+begin
+
+end;
+
+function TComponentEdit.Margem(Value: TEditMargins): iEdits;
+begin
+
+end;
+
+class function TComponentEdit.New(AWOner: TComponent): iEdits;
+begin
+
+end;
+
+function TComponentEdit.Nome(Value: string): iEdits;
+begin
+
+end;
+
+function TComponentEdit.PlaceHolder(Value: string): iEdits;
+begin
+
+end;
+
+function TComponentEdit.Text(Value: string): iEdits;
+begin
+
+end;
+
+function TComponentEdit.Titulo(Value: string): iEdits;
+begin
+
+end;
+
+function TComponentEdit.VertText(Value: TTextAlign): iEdits;
+begin
+
+end;
+
+end.

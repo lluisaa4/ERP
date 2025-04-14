@@ -1,0 +1,21 @@
+unit acerp.core.entities.empresa;
+
+interface
+
+type
+  TEmpresasDadosValidos = class
+    private
+    public
+      function CnpjHeValido(CNPJ: string): Boolean;
+  end;
+
+implementation
+
+{ TEmpresasDadosValidos }
+
+function TEmpresasDadosValidos.CnpjHeValido(CNPJ: string): Boolean;
+begin
+  Result := False;
+end;
+
+end.

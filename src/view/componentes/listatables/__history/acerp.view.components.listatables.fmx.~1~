@@ -1,0 +1,74 @@
+object ComponentListaTable: TComponentListaTable
+  Size.Width = 1016.000000000000000000
+  Size.Height = 60.000000000000000000
+  Size.PlatformDefault = False
+  object lytContainer: TLayout
+    Align = Client
+    Padding.Left = 5.000000000000000000
+    Padding.Top = 5.000000000000000000
+    Padding.Right = 5.000000000000000000
+    Padding.Bottom = 5.000000000000000000
+    Size.Width = 1016.000000000000000000
+    Size.Height = 60.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object lyt1: TLayout
+      Align = Left
+      Margins.Left = 10.000000000000000000
+      Position.X = 15.000000000000000000
+      Position.Y = 5.000000000000000000
+      Size.Width = 70.000000000000000000
+      Size.Height = 50.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 5
+    end
+    object lyt2: TLayout
+      Align = Right
+      Margins.Left = 10.000000000000000000
+      Position.X = 891.000000000000000000
+      Position.Y = 5.000000000000000000
+      Size.Width = 120.000000000000000000
+      Size.Height = 50.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 4
+    end
+    object lyt3: TLayout
+      Align = Right
+      Margins.Left = 10.000000000000000000
+      Position.X = 761.000000000000000000
+      Position.Y = 5.000000000000000000
+      Size.Width = 120.000000000000000000
+      Size.Height = 50.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 3
+    end
+    object lyt4: TLayout
+      Align = Right
+      Margins.Left = 10.000000000000000000
+      Position.X = 481.000000000000000000
+      Position.Y = 5.000000000000000000
+      Size.Width = 180.000000000000000000
+      Size.Height = 50.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+    end
+    object lyt5: TLayout
+      Align = Right
+      Margins.Left = 10.000000000000000000
+      Position.X = 671.000000000000000000
+      Position.Y = 5.000000000000000000
+      Size.Width = 80.000000000000000000
+      Size.Height = 50.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+    end
+    object lyt6: TLayout
+      Align = Client
+      Margins.Left = 10.000000000000000000
+      Size.Width = 376.000000000000000000
+      Size.Height = 50.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+    end
+  end
+end

@@ -1,0 +1,131 @@
+unit acerp.view.componentes.cardsgraficos;
+
+interface
+
+uses
+  System.SysUtils,
+  System.Types,
+  System.UITypes,
+  System.Classes,
+  System.Variants,
+  FMX.Types,
+  FMX.Graphics,
+  FMX.Controls,
+  FMX.Forms,
+  FMX.Dialogs,
+  FMX.StdCtrls,
+  FMX.Layouts,
+  FMX.Objects,
+  FMX.Controls.Presentation, acerp.services.enums;
+
+type
+  TComponentCardGraficos = class(TFrame)
+    lytContainer: TLayout;
+    rectangleBackground: TRectangle;
+    lytTitulos: TLayout;
+    lytRodape: TLayout;
+    lytGraficos: TLayout;
+    lyt1: TLayout;
+    lyt2: TLayout;
+    rctngl1: TRectangle;
+    lblInfo: TLabel;
+    lblTitulo: TLabel;
+    ln1: TLine;
+    lyt3: TLayout;
+    crcl1: TCircle;
+    imageRodape: TImage;
+    lytRodapeTItulo: TLayout;
+    lblTituloRodape: TLabel;
+    lytTituloGrafico: TLayout;
+    lblTituloGrafico: TLabel;
+  private
+    FTituloGrafico: string;
+  public
+    class function New(AOWner: TComponent): TComponentCardGraficos;
+    function Nome(Value: string): TComponentCardGraficos;
+    function TituloInfo(Value: string; Color: TAlphaColor = $FFFFFFFF): TComponentCardGraficos;
+    function TituloDescricao(Value: string; Color: TAlphaColor = $FFFFFFFF): TComponentCardGraficos;
+    function DescricaoRodape(Value: string; Color: TAlphaColor = $FFFFFFFF): TComponentCardGraficos;
+    function ImagemRodape(Value: string; Color: TAlphaColor = $FFFFFFFF): TComponentCardGraficos;
+    function TituloGrafico(Value: string; Color: TAlphaColor = $FF000000): TComponentCardGraficos;
+    function TipoGrafico(Value: TChartType): TComponentCardGraficos;
+    function Alinhamento(Value: TAlignLayout): TComponentCardGraficos;
+    function Build: TFmxObject;
+  end;
+
+
+implementation
+
+{$R *.fmx}
+
+{ TComponentCardGraficos }
+
+function TComponentCardGraficos.Alinhamento(
+  Value: TAlignLayout): TComponentCardGraficos;
+begin
+  Result := Self;
+  lytContainer.Align := TAlignLayout.None;
+  lytContainer.Align := Value;
+end;
+
+function TComponentCardGraficos.Build: TFmxObject;
+begin
+  Result := lytContainer;
+end;
+
+function TComponentCardGraficos.DescricaoRodape(Value: string;
+  Color: TAlphaColor): TComponentCardGraficos;
+begin
+  Result := Self;
+  lblTituloRodape.Text := Value;
+  lblTituloRodape.FontColor := Color;
+end;
+
+class function TComponentCardGraficos.New(
+  AOWner: TComponent): TComponentCardGraficos;
+begin
+  Result := Self.Create(AOWner);
+end;
+
+function TComponentCardGraficos.Nome(Value: string): TComponentCardGraficos;
+begin
+  Result := Self;
+  Self.Name := Value;
+end;
+
+function TComponentCardGraficos.TipoGrafico(
+  Value: TChartType): TComponentCardGraficos;
+begin
+  Result := Self;
+  case Value of
+    Pie: ;
+    Donuts: ;
+    Lines: ;
+    Bars: ;
+  end;
+end;
+
+function TComponentCardGraficos.TituloDescricao(Value: string;
+  Color: TAlphaColor): TComponentCardGraficos;
+begin
+  Result := Self;
+  lblTitulo.Text := Value;
+  lblTitulo.FontColor := Color;
+
+
+
+end;
+
+function TComponentCardGraficos.TituloGrafico(Value: string;
+  Color: TAlphaColor): TComponentCardGraficos;
+begin
+
+end;
+
+function TComponentCardGraficos.TituloInfo(Value: string;
+  Color: TAlphaColor): TComponentCardGraficos;
+begin
+
+end;
+
+end.

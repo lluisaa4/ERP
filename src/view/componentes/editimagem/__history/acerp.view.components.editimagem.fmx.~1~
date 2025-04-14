@@ -1,0 +1,19 @@
+object ComponentEditImage: TComponentEditImage
+  Size.Width = 320.000000000000000000
+  Size.Height = 50.000000000000000000
+  Size.PlatformDefault = False
+  object lytContainer: TLayout
+    Align = Client
+    Size.Width = 320.000000000000000000
+    Size.Height = 50.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object rctngl1: TRectangle
+      Align = Client
+      Fill.Kind = None
+      Size.Width = 320.000000000000000000
+      Size.Height = 50.000000000000000000
+      Size.PlatformDefault = False
+    end
+  end
+end

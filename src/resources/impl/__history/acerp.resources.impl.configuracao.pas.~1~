@@ -1,0 +1,128 @@
+unit acerp.resources.impl.configuracao;
+
+interface
+
+uses
+  acerp.resources.interfaces;
+
+type
+  TConfiguracao = class(TInterfacedObject, iConfiguracao)
+  private
+    FDriverID: string;
+    FDataBase: string;
+    FUserName: string;
+    FPassword: string;
+    FPort: string;
+    FServer: string;
+    FSchema: string;
+    FLocking: string;
+
+  public
+    class function New: iConfiguracao;
+
+    function DriverID(Value: string): iConfiguracao; overload;
+    function DriverID: string; overload;
+    function DataBase(Value: string): iConfiguracao; overload;
+    function DataBase: string; overload;
+    function UserName(Value: string): iConfiguracao; overload;
+    function UserName: string; overload;
+    function Password(Value: string): iConfiguracao; overload;
+    function Password: string; overload;
+    function Port(Value: string): iConfiguracao; overload;
+    function Port: string; overload;
+    function Server(Value: string): iConfiguracao; overload;
+    function Server: string; overload;
+    function Schema(Value: string): iConfiguracao; overload;
+    function Schema: string; overload;
+    function Locking(Value: string): iConfiguracao; overload;
+    function Locking: string; overload;
+  end;
+
+implementation
+
+function TConfiguracao.DataBase: string;
+begin
+
+end;
+
+function TConfiguracao.DataBase(Value: string): iConfiguracao;
+begin
+
+end;
+
+function TConfiguracao.DriverID: string;
+begin
+
+end;
+
+function TConfiguracao.DriverID(Value: string): iConfiguracao;
+begin
+
+end;
+
+function TConfiguracao.Locking: string;
+begin
+
+end;
+
+function TConfiguracao.Locking(Value: string): iConfiguracao;
+begin
+
+end;
+
+class function TConfiguracao.New: iConfiguracao;
+begin
+  Result := Self.Create;
+end;
+
+function TConfiguracao.Password: string;
+begin
+
+end;
+
+function TConfiguracao.Password(Value: string): iConfiguracao;
+begin
+
+end;
+
+function TConfiguracao.Port(Value: string): iConfiguracao;
+begin
+
+end;
+
+function TConfiguracao.Port: string;
+begin
+
+end;
+
+function TConfiguracao.Schema: string;
+begin
+
+end;
+
+function TConfiguracao.Schema(Value: string): iConfiguracao;
+begin
+
+end;
+
+function TConfiguracao.Server(Value: string): iConfiguracao;
+begin
+
+end;
+
+function TConfiguracao.Server: string;
+begin
+
+end;
+
+function TConfiguracao.UserName(Value: string): iConfiguracao;
+begin
+
+end;
+
+function TConfiguracao.UserName: string;
+begin
+
+end;
+
+end.

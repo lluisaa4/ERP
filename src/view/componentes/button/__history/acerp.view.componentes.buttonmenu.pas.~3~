@@ -1,0 +1,84 @@
+unit acerp.view.componentes.buttonmenu;
+
+interface
+
+uses
+  System.SysUtils,
+  System.Types,
+  System.UITypes,
+  System.Classes,
+  System.Variants,
+  FMX.Types,
+  FMX.Graphics,
+  FMX.Controls,
+  FMX.Forms,
+  FMX.Dialogs,
+  FMX.StdCtrls,
+  FMX.Layouts, FMX.Controls.Presentation, FMX.Objects;
+
+type
+  TComponentButtonMenu = class(TFrame)
+    lytContainer: TLayout;
+    lyt1: TLayout;
+    lyt2: TLayout;
+    lytImageInfo: TLayout;
+    lytImageMenu: TLayout;
+    imageInfo: TImage;
+    imgageMenu: TImage;
+    lytDescricao: TLayout;
+    lblDescricao: TLabel;
+    lytSubMenu: TLayout;
+    lytButton: TLayout;
+    procedure lytButtonClick(Sender: TObject);
+  private
+    FHeight: Single;
+
+    procedure RedimencionaSubMenu;
+  public
+    constructor Create(AOwner: TComponent); override;
+    class function New: TComponentButtonMenu;
+    function Component: TFMXObject;
+    function SubMenu(Value: TFMXObject) : TComponentButtonMenu;
+  end;
+
+implementation
+
+{$R *.fmx}
+
+{ TComponentButtonMenu }
+
+function TComponentButtonMenu.Component: TFMXObject;
+begin
+  Result := lytContainer;
+end;
+
+constructor TComponentButtonMenu.Create(AOwner: TComponent);
+begin
+  inherited;
+  lytContainer.Height := 60;
+end;
+
+procedure TComponentButtonMenu.lytButtonClick(Sender: TObject);
+begin
+  lytContainer.Height := FHeight;
+end;
+
+class function TComponentButtonMenu.New: TComponentButtonMenu;
+begin
+  Result := Self.Create(nil);
+end;
+
+procedure TComponentButtonMenu.RedimencionaSubMenu;
+begin
+  for var I := 0 to Pred(lytSubMenu.ComponentCount) do
+    if lytSubMenu.Components[I] is TLayout then
+      FHeight := FHeight + TLayout(lytSubMenu.Components[I]).Height;
+end;
+
+function TComponentButtonMenu.SubMenu(Value: TFMXObject): TComponentButtonMenu;
+begin
+  Result := Self;
+  lytSubMenu.AddObject(Value);
+end;
+
+end.

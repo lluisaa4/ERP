@@ -1,0 +1,59 @@
+unit acerp.view.componentes.cardsgraficos;
+
+interface
+
+uses
+  System.SysUtils,
+  System.Types,
+  System.UITypes,
+  System.Classes,
+  System.Variants,
+  FMX.Types,
+  FMX.Graphics,
+  FMX.Controls,
+  FMX.Forms,
+  FMX.Dialogs,
+  FMX.StdCtrls,
+  FMX.Layouts,
+  FMX.Objects,
+  FMX.Controls.Presentation;
+
+type
+  TComponentCardGraficos = class(TFrame)
+    lytContainer: TLayout;
+    rectangleBackground: TRectangle;
+    lytTitulos: TLayout;
+    lytRodape: TLayout;
+    lytGraficos: TLayout;
+    lyt1: TLayout;
+    lyt2: TLayout;
+    rctngl1: TRectangle;
+    lblInfo: TLabel;
+    Label1: TLabel;
+    ln1: TLine;
+    lyt3: TLayout;
+    crcl1: TCircle;
+    imageRodape: TImage;
+    lytRodapeTItulo: TLayout;
+    lblTituloRodape: TLabel;
+    lyt4: TLayout;
+    lblTituloGrafico: TLabel;
+  private
+    { Private declarations }
+  public
+    class function New(AOWner: TComponent): TComponentCardGraficos;
+    function Nome(Value: string): TComponentCardGraficos;
+    function TituloInfo(Value: string; Color: TAlphaColor = $FFFFFFFF): TComponentCardGraficos;
+    function TituloDescricao(Value: string; Color: TAlphaColor = $FFFFFFFF): TComponentCardGraficos;
+    function DescricaoRodape(Value: string; Color: TAlphaColor = $FFFFFFFF): TComponentCardGraficos;
+    function ImageRodape(Value: string; Color: TAlphaColor = $FFFFFFFF): TComponentCardGraficos;;
+    function ImageRodape(Value: string; Color: TAlphaColor = $FFFFFFFF): TComponentCardGraficos;
+    function Titulo
+  end;
+
+
+implementation
+
+{$R *.fmx}
+
+end.

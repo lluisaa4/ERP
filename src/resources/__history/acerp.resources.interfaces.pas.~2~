@@ -1,0 +1,39 @@
+unit acerp.resources.interfaces;
+
+interface
+
+uses
+  Data.DB;
+
+type
+  iConexao = interface
+    function Connect: TCustomConnection;
+  end;
+
+  iConfiguracao = interface
+    function DriverID(Value: string): iConfiguracao;
+    function DriverID: string;
+    function DataBase(Value: string): iConfiguracao;
+    function DataBase: string;
+    function UserName(Value: string): iConfiguracao;
+    function UserName: string;
+    function Password(Value: string): iConfiguracao;
+    function Password: string;
+    function Port(Value: string): iConfiguracao;
+    function Port: string;
+    function Server(Value: string): iConfiguracao;
+    function Server: string;
+    function Schema(Value: string): iConfiguracao;
+    function Schema: string;
+    function Locking(Value: string): iConfiguracao;
+    function Locking: string;
+  end;
+
+  iResource = interface
+    function Conexao: iConexao;
+    function Configuracao: iConfiguracao;
+  end;
+
+implementation
+
+end.

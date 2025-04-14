@@ -1,0 +1,24 @@
+object ComponentCard: TComponentCard
+  Size.Width = 239.000000000000000000
+  Size.Height = 143.000000000000000000
+  Size.PlatformDefault = False
+  object lytContainer: TLayout
+    Align = Client
+    Padding.Left = 10.000000000000000000
+    Padding.Right = 10.000000000000000000
+    Size.Width = 239.000000000000000000
+    Size.Height = 143.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object rctngl1: TRectangle
+      Align = Client
+      Fill.Color = claWhite
+      Size.Width = 219.000000000000000000
+      Size.Height = 143.000000000000000000
+      Size.PlatformDefault = False
+      Stroke.Kind = None
+      XRadius = 10.000000000000000000
+      YRadius = 10.000000000000000000
+    end
+  end
+end

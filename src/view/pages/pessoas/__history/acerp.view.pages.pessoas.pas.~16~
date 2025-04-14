@@ -1,0 +1,230 @@
+unit acerp.view.pages.pessoas;
+
+interface
+
+uses
+  System.SysUtils,
+  System.Types,
+  System.UITypes,
+  System.Classes,
+  System.Variants,
+  FMX.Types,
+  FMX.Controls,
+  FMX.Forms,
+  FMX.Graphics,
+  FMX.Dialogs,
+  FMX.Layouts,
+  Router4D.Interfaces,
+  FMX.Objects,
+  FMX.Controls.Presentation,
+  FMX.StdCtrls,
+  FMX.Effects;
+type
+  TPagePessoas = class(TForm, iRouter4DComponent)
+    lytContainer: TLayout;
+    lyt1: TLayout;
+    lyt2: TLayout;
+    rctngl1: TRectangle;
+    layout1: TLayout;
+    lyt3: TLayout;
+    Label1: TLabel;
+    lyt5: TLayout;
+    lyt6: TLayout;
+    lyt7: TLayout;
+    lyt8: TLayout;
+    lyt9: TLayout;
+    shdwfct1: TShadowEffect;
+    rctngl2: TRectangle;
+    lyt4: TLayout;
+    imageCapa: TImage;
+    lytInfoPerfil: TLayout;
+    lyt11: TLayout;
+    lytImagePerfil: TLayout;
+    lyt10: TLayout;
+    rndrct1: TRoundRect;
+    lyt12: TLayout;
+    img1: TImage;
+    lytNome: TLayout;
+    lblNome: TLabel;
+    lytUser: TLayout;
+    lblUser: TLabel;
+    lytDescricao: TLayout;
+    lblDescricao: TLabel;
+    lytFiles: TLayout;
+    lytSpent: TLayout;
+    lyt15: TLayout;
+    lyt2323: TLayout;
+    ln1: TLine;
+    lytUsed: TLayout;
+    Label2: TLabel;
+    Label3: TLabel;
+    Label4: TLabel;
+    Label5: TLabel;
+    Label6: TLabel;
+    Label7: TLabel;
+    lytImageCapa: TLayout;
+
+  private
+    procedure CriaEdits;
+    procedure MontarTexto;
+    procedure CarregarImagem;
+  public
+    function Render: TFMXObject;
+    procedure UnRender;
+  end;
+
+implementation
+
+{$R *.fmx}
+
+uses
+  acerp.view.componentes.edits,
+  acerp.view.components.interfaces,
+  acerp.view.componentes.cards;
+
+{ TForm1 }
+
+
+
+procedure TPagePessoas.CriaEdits;
+begin
+  var lMargem: TEditMargins;
+  lMargem.Right := 10;
+
+  lyt5.AddObject(
+    TComponentEdit.New(Self)
+      .Nome('company')
+      .Enable(False)
+      .Titulo('Company (disable)')
+      .Alinhamento(TAlignLayout.Left)
+      .Largura(300)
+      .Margem(lMargem)
+      .PlaceHolder('Company')
+      .Build);
+
+  lyt5.AddObject(
+    TComponentEdit.New(Self)
+      .Nome('email')
+      .Titulo('Email adrress')
+      .Alinhamento(TAlignLayout.Left)
+      .Largura(300)
+      .Margem(lMargem)
+      .PlaceHolder('Email')
+      .BackGroundColor($FFFFFFFF)
+      .Build);
+
+  lyt5.AddObject(
+    TComponentEdit.New(Self)
+      .Nome('username')
+      .Titulo('Username')
+      .Alinhamento(TAlignLayout.Left)
+      .Largura(300)
+      .Margem(lMargem)
+      .PlaceHolder('Username')
+      .BackGroundColor($FFFFFFFF)
+      .Build);
+
+  lyt6.AddObject(
+    TComponentEdit.New(Self)
+      .Nome('first')
+      .Titulo('First Name')
+      .Alinhamento(TAlignLayout.Left)
+      .Largura(460)
+      .Margem(lMargem)
+      .PlaceHolder('First Name')
+      .Build);
+
+  lyt6.AddObject(
+    TComponentEdit.New(Self)
+      .Nome('last')
+      .Titulo('Last Name')
+      .Alinhamento(TAlignLayout.Left)
+      .Largura(460)
+      .Margem(lMargem)
+      .PlaceHolder('Last Name')
+      .Build);
+
+  lyt7.AddObject(
+    TComponentEdit.New(Self)
+      .Nome('address')
+      .Titulo('Adress')
+      .Alinhamento(TAlignLayout.Left)
+      .Largura(920)
+      .Margem(lMargem)
+      .PlaceHolder('Adress')
+      .Build);
+
+  lyt8.AddObject(
+    TComponentEdit.New(Self)
+      .Nome('city')
+      .Titulo('City')
+      .Alinhamento(TAlignLayout.Left)
+      .Largura(300)
+      .Margem(lMargem)
+      .PlaceHolder('City')
+      .Build);
+
+  lyt8.AddObject(
+    TComponentEdit.New(Self)
+      .Nome('country')
+      .Titulo('Country')
+      .Alinhamento(TAlignLayout.Left)
+      .Largura(300)
+      .Margem(lMargem)
+      .PlaceHolder('Country')
+      .Build);
+
+  lyt8.AddObject(
+    TComponentEdit.New(Self)
+      .Nome('postal')
+      .Titulo('Postal Code')
+      .Alinhamento(TAlignLayout.Left)
+      .Largura(300)
+      .Margem(lMargem)
+      .PlaceHolder('Postal Code')
+      .Build);
+
+  lyt9.AddObject(
+    TComponentEdit.New(Self)
+      .Nome('about')
+      .Titulo('About Me')
+      .Alinhamento(TAlignLayout.Left)
+      .Largura(920)
+      .Margem(lMargem)
+      .VertText(TTextAlign.Leading)
+      .PlaceHolder('Tell me a little about you...')
+      .Build);
+end;
+
+procedure TPagePessoas.CarregarImagem;
+begin
+  imageCapa.Bitmap.LoadFromFile('C:\dev\estudos\ac-erp\src\asserts\prog.png');
+  imageCapa.Align := TAlignLayout.Client;  // Faz a imagem ocupar todo o espaço disponível
+  imageCapa.WrapMode := TImageWrapMode.Stretch; // Ajusta a imagem para preencher o componente
+end;
+
+
+
+procedure TPagePessoas.MontarTexto;
+begin
+//  btnCancelarOp.Caption := 'Cancelar Operação ' + ''#13'' + ' (ESC)';
+  lblNome.Text := 'Laura Luísa';
+  lblNome.TextSettings.FontColor := $FFD8859A;
+  lblDescricao.Text := 'I like the way you work it' + ''#13'' +
+                    'No diggity' + ''#13'' + 'I wanna bag it up';
+end;
+
+function TPagePessoas.Render: TFMXObject;
+begin
+  CarregarImagem;
+  CriaEdits;
+  MontarTexto;
+  Result := lytContainer;
+end;
+
+procedure TPagePessoas.UnRender;
+begin
+
+end;
+
+end.

@@ -1,0 +1,48 @@
+program ACERP;
+
+{$R *.dres}
+
+uses
+  System.StartUpCopy,
+  FMX.Forms,
+  acerp.view.index in 'src\view\acerp.view.index.pas' {PageIndex},
+  acerp.view.router in 'src\view\router\acerp.view.router.pas',
+  acerp.view.pages.home in 'src\view\pages\home\acerp.view.pages.home.pas' {PageHome},
+  acerp.view.pages.layout in 'src\view\pages\layout\acerp.view.pages.layout.pas' {PageLayout},
+  acerp.view.componentes.button in 'src\view\componentes\button\acerp.view.componentes.button.pas' {ComponentButton: TFrame},
+  acerp.services.utils in 'src\services\acerp.services.utils.pas',
+  acerp.view.componentes.sidebar in 'src\view\componentes\sidebar\acerp.view.componentes.sidebar.pas' {ComponentSidebar: TFrame},
+  acerp.view.componentes.cards in 'src\view\componentes\cards\acerp.view.componentes.cards.pas' {ComponentCard: TFrame},
+  acerp.view.componentes.cardsgraficos in 'src\view\componentes\cardsgraficos\acerp.view.componentes.cardsgraficos.pas' {ComponentCardGraficos: TFrame},
+  acerp.services.charts in 'src\services\acerp.services.charts.pas',
+  acerp.services.chats.interfaces in 'src\services\acerp.services.chats.interfaces.pas',
+  acerp.services.enums in 'src\services\acerp.services.enums.pas',
+  Chart4Delphi in 'src\services\Chart4Delphi.pas',
+  acerp.view.pages.pessoas in 'src\view\pages\pessoas\acerp.view.pages.pessoas.pas' {PagePessoas},
+  acerp.view.componentes.edits in 'src\view\componentes\edit\acerp.view.componentes.edits.pas' {ComponentEdit: TFrame},
+  acerp.view.components.interfaces in 'src\view\componentes\acerp.view.components.interfaces.pas',
+  acerp.view.pages.login in 'src\view\pages\login\acerp.view.pages.login.pas' {PageLogin},
+  acerp.view.components.editimagem in 'src\view\componentes\editimagem\acerp.view.components.editimagem.pas' {ComponentEditImage: TFrame},
+  acerp.view.pages.tables in 'src\view\pages\tables\acerp.view.pages.tables.pas' {PageTables},
+  acerp.view.components.extendertables in 'src\view\componentes\tables\acerp.view.components.extendertables.pas' {ComponentExtendedTables: TFrame},
+  acerp.view.components.listatables in 'src\view\componentes\listatables\acerp.view.components.listatables.pas' {ComponentListaTable: TFrame},
+  acerp.view.styles in 'src\view\styles\acerp.view.styles.pas',
+  acerp.view.styles.states in 'src\view\styles\acerp.view.styles.states.pas',
+  acerp.view.pages.listapessoas in 'src\view\pages\pessoas\acerp.view.pages.listapessoas.pas' {PageListaPessoas},
+  acerp.resources.interfaces in 'src\resources\acerp.resources.interfaces.pas',
+  acerp.resources.impl.conexaofiredac in 'src\resources\impl\acerp.resources.impl.conexaofiredac.pas',
+  acerp.resources.impl.configuracao in 'src\resources\impl\acerp.resources.impl.configuracao.pas',
+  acerp.resources.impl.resource in 'src\resources\impl\acerp.resources.impl.resource.pas',
+  acerp.view.componentes.edits2 in 'src\view\componentes\edit\acerp.view.componentes.edits2.pas' {ComponentEdit2},
+  acerp.view.componentes.editsarea in 'src\view\componentes\edit\acerp.view.componentes.editsarea.pas' {ComponentEditArea},
+  acerp.view.pages.empresas in 'src\view\pages\empresas\acerp.view.pages.empresas.pas' {PageEmpresa},
+  acerp.view.components.interfaces2 in 'src\view\componentes\acerp.view.components.interfaces2.pas',
+  acerp.core.entities.empresa in 'src\core\entities\acerp.core.entities.empresa.pas';
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.CreateForm(TPageIndex, PageIndex);
+  Application.Run;
+end.

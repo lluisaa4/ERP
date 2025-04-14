@@ -1,0 +1,195 @@
+unit acerp.view.componentes.sidebar;
+
+interface
+
+uses
+  System.SysUtils,
+  System.Types,
+  System.UITypes,
+  System.Classes,
+  System.Variants,
+  FMX.Types,
+  FMX.Graphics,
+  FMX.Controls,
+  FMX.Forms,
+  FMX.Dialogs,
+  FMX.StdCtrls,
+  FMX.Layouts,
+  FMX.Objects, FMX.MultiView;
+
+type
+  TComponentSidebar = class(TFrame)
+    lytContainer: TLayout;
+    lyt1: TLayout;
+    lyt2: TLayout;
+    lyt3: TLayout;
+    ln1: TLine;
+    ln2: TLine;
+    lytProfile: TLayout;
+    lytMenu: TLayout;
+    rctngl1: TRectangle;
+  private
+    FMultiView: TMultiView;
+    FOnMenuShow: TProc;
+    FOnMenuHide: TProc;
+
+    procedure ConstruirPerfil;
+    procedure ConstruirMenu;
+  public
+    class function New(AOwner: TComponent): TComponentSidebar;
+    function MultiView(Value: TMultiView): TComponentSidebar;
+    function OnMenuShow(Value: TProc): TComponentSidebar;
+    function OnMenuHide(Value: TProc): TComponentSidebar;
+    function Component: TFMXObject;
+  end;
+
+implementation
+
+uses
+  Router4D,
+  System.Generics.Collections,
+  acerp.view.componentes.button;
+
+{$R *.fmx}
+
+{ TComponentSidebar }
+
+function TComponentSidebar.Component: TFMXObject;
+begin
+  ConstruirMenu;
+  ConstruirPerfil;
+  Result := lytContainer;
+end;
+
+procedure TComponentSidebar.ConstruirMenu;
+begin
+  var lListaBotoes := TObjectList<TFMXObject>.Create;
+  lListaBotoes.Add(
+    TComponentButton.New(Self)
+      .Nome('pessoas')
+      .SingleButtom
+      .Descricao('Pessoas')
+      .ColorDefault($FFFFFFFF)
+      .ColorEnter($FF723055)
+      .Click(procedure (Sender: TObject)
+      begin
+        TRouter4D.Link.&to('ListaPessoas')
+      end)
+      .Component);
+
+  lListaBotoes.Add(
+    TComponentButton.New(Self)
+      .Nome('empresas')
+      .SingleButtom
+      .Descricao('Empresas')
+      .ColorDefault($FFFFFFFF)
+      .ColorEnter($FF723055)
+      .Component);
+
+  lListaBotoes.Add(
+    TComponentButton.New(Self)
+      .Nome('mercadorias')
+      .SingleButtom
+      .Descricao('Mercadorias')
+      .ColorDefault($FFFFFFFF)
+      .ColorEnter($FF723055)
+      .Component);
+
+  lListaBotoes.Add(
+    TComponentButton.New(Self)
+      .Nome('turno')
+      .SingleButtom
+      .Descricao('Turno')
+      .ColorDefault($FFFFFFFF)
+      .ColorEnter($FF723055)
+      .Component);
+
+  lListaBotoes.Add(
+    TComponentButton.New(Self)
+      .Nome('caixa')
+      .SingleButtom
+      .Descricao('Caixa')
+      .ColorDefault($FFFFFFFF)
+      .ColorEnter($FF723055)
+      .Component);
+
+  lytMenu.AddObject(
+    TComponentButton.New(Self)
+    .Nome('dashboard')
+    .SingleButtom
+    .Descricao('Dashboard')
+    .Image('banco')
+    .ColorDefault($FFFFFFFF)
+    .ColorEnter($FF723055)
+    .Alinhamento(TAlignLayout.Top)
+    .Click(procedure (Sender: TObject)
+      begin
+        TRouter4D.Link.&To('Home');
+      end)
+    .Component);
+
+  lytMenu.AddObject(
+    TComponentButton.New(Self)
+    .Nome('cadastros')
+    .CompositeButton
+    .SubMenu(lListaBotoes)
+    .Descricao('Cadastros')
+    .Image('cadastros')
+    .ColorDefault($FFFFFFFF)
+    .ColorEnter($FF723055)
+    .Alinhamento(TAlignLayout.Top)
+    .Component);
+
+
+  lytMenu.AddObject(
+    TComponentButton.New(Self)
+    .Nome('tabela')
+    .SingleButtom
+    .Descricao('Tabela')
+    .Image('tabela')
+    .ColorDefault($FFFFFFFF)
+    .ColorEnter($FF723055)
+    .Alinhamento(TAlignLayout.Top)
+    .Click(procedure (Sender: TObject)
+      begin
+        TRouter4D.Link.&To('Tabela');
+      end)
+    .Component);
+end;
+
+procedure TComponentSidebar.ConstruirPerfil;
+begin
+  lytProfile.AddObject(
+    TComponentButton.New(Self)
+      .Nome('perfil')
+      .Perfil('darth')
+      .Descricao('Laura Luísa')
+      .ColorDefault($FFFFFFFF)
+      .ColorEnter($FF723055)
+      .Component);
+end;
+
+function TComponentSidebar.MultiView(Value: TMultiView): TComponentSidebar;
+begin
+  Result := Self;
+  FMultiView := Value;
+end;
+
+class function TComponentSidebar.New(AOwner: TComponent): TComponentSidebar;
+begin
+  Result := Self.Create(AOwner);
+end;
+
+function TComponentSidebar.OnMenuHide(Value: TProc): TComponentSidebar;
+begin
+  Result := Self;
+  FOnMenuHide := Value;
+end;
+
+function TComponentSidebar.OnMenuShow(Value: TProc): TComponentSidebar;
+begin
+  Result := Self;
+  FOnMenuShow := Value;
+end;
+
+end.

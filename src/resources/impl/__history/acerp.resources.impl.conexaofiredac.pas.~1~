@@ -1,0 +1,34 @@
+unit acerp.resources.impl.conexaofiredac;
+
+interface
+
+uses
+  Data.DB,
+  FireDAC.Comp.Client,
+  acerp.resources.interfaces;
+
+type
+  TConexaoFiredac = class(TInterfacedObject, iConexao)
+  private
+    FConn: TFDConnection;
+  public
+    class function New: iConexao;
+    function Connect: TCustomConnection;
+  end;
+
+implementation
+
+
+{ TConexao }
+
+function TConexaoFiredac.Connect: TCustomConnection;
+begin
+
+end;
+
+class function TConexaoFiredac.New: iConexao;
+begin
+  Result := Self.Create;
+end;
+
+end.

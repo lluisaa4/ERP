@@ -1,0 +1,25 @@
+unit acerp.view.pages.tables;
+
+interface
+
+uses
+  System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
+  FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.Layouts;
+
+type
+  TPageTables = class(TForm)
+    lytContainer: TLayout;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  PageTables: TPageTables;
+
+implementation
+
+{$R *.fmx}
+
+end.

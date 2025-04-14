@@ -1,0 +1,205 @@
+object ComponentExtendedTables: TComponentExtendedTables
+  Size.Width = 887.000000000000000000
+  Size.Height = 592.000000000000000000
+  Size.PlatformDefault = False
+  object lytContainer: TLayout
+    Align = Client
+    Padding.Left = 10.000000000000000000
+    Padding.Top = 10.000000000000000000
+    Padding.Right = 10.000000000000000000
+    Padding.Bottom = 10.000000000000000000
+    Size.Width = 887.000000000000000000
+    Size.Height = 592.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object rctnglBackground: TRectangle
+      Align = Client
+      Fill.Color = claWhite
+      Padding.Left = 10.000000000000000000
+      Padding.Top = 10.000000000000000000
+      Padding.Right = 10.000000000000000000
+      Padding.Bottom = 10.000000000000000000
+      Size.Width = 867.000000000000000000
+      Size.Height = 572.000000000000000000
+      Size.PlatformDefault = False
+      Stroke.Kind = None
+      XRadius = 10.000000000000000000
+      YRadius = 10.000000000000000000
+      object lyt1: TLayout
+        Align = Top
+        Position.X = 10.000000000000000000
+        Position.Y = 10.000000000000000000
+        Size.Width = 847.000000000000000000
+        Size.Height = 50.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        object lblTitulo: TLabel
+          Align = Client
+          StyledSettings = [Family, Style]
+          Size.Width = 697.000000000000000000
+          Size.Height = 50.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Size = 25.000000000000000000
+          Text = 'Simple Table'
+          TabOrder = 0
+        end
+        object lyt2: TLayout
+          Align = Right
+          Padding.Left = 10.000000000000000000
+          Padding.Top = 5.000000000000000000
+          Padding.Right = 10.000000000000000000
+          Padding.Bottom = 5.000000000000000000
+          Position.X = 697.000000000000000000
+          Size.Width = 150.000000000000000000
+          Size.Height = 50.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 1
+          object rndrct1: TRoundRect
+            Align = Client
+            Fill.Color = xFF0CB5B5
+            Padding.Left = 10.000000000000000000
+            Padding.Top = 10.000000000000000000
+            Padding.Right = 10.000000000000000000
+            Padding.Bottom = 10.000000000000000000
+            Size.Width = 130.000000000000000000
+            Size.Height = 40.000000000000000000
+            Size.PlatformDefault = False
+            Stroke.Kind = None
+            object Label1: TLabel
+              Align = Client
+              StyledSettings = [Family]
+              Size.Width = 110.000000000000000000
+              Size.Height = 20.000000000000000000
+              Size.PlatformDefault = False
+              TextSettings.Font.Size = 15.000000000000000000
+              TextSettings.Font.StyleExt = {00070000000000000004000000}
+              TextSettings.FontColor = claWhite
+              TextSettings.HorzAlign = Center
+              Text = 'Novo'
+              TabOrder = 0
+            end
+          end
+          object lyt3: TLayout
+            Align = Contents
+            Cursor = crHandPoint
+            HitTest = True
+            Size.Width = 150.000000000000000000
+            Size.Height = 50.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 1
+            OnClick = lyt3Click
+            OnMouseEnter = lyt3MouseEnter
+            OnMouseLeave = lyt3MouseLeave
+          end
+        end
+      end
+      object shdwfct1: TShadowEffect
+        Distance = 2.000000000000000000
+        Direction = 45.000000000000000000
+        Softness = 0.200000002980232200
+        Opacity = 0.600000023841857900
+        ShadowColor = claBlack
+      end
+      object lytTable: TLayout
+        Align = Client
+        Padding.Left = 10.000000000000000000
+        Padding.Right = 10.000000000000000000
+        Size.Width = 847.000000000000000000
+        Size.Height = 502.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        object lytTitulos: TLayout
+          Align = Top
+          Position.X = 10.000000000000000000
+          Size.Width = 827.000000000000000000
+          Size.Height = 50.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          object Label2: TLabel
+            Align = Left
+            StyledSettings = [Family, Style]
+            Margins.Left = 10.000000000000000000
+            Position.X = 10.000000000000000000
+            Size.Width = 70.000000000000000000
+            Size.Height = 50.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 15.000000000000000000
+            Text = '#'
+            TabOrder = 5
+          end
+          object Label3: TLabel
+            Align = Right
+            StyledSettings = [Family, Style]
+            Margins.Left = 10.000000000000000000
+            Position.X = 577.000000000000000000
+            Size.Width = 120.000000000000000000
+            Size.Height = 50.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 15.000000000000000000
+            TextSettings.HorzAlign = Center
+            Text = 'Sal'#225'rio '
+            TabOrder = 4
+          end
+          object Label4: TLabel
+            Align = Right
+            StyledSettings = [Family, Style]
+            Margins.Left = 10.000000000000000000
+            Position.X = 487.000000000000000000
+            Size.Width = 80.000000000000000000
+            Size.Height = 50.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 15.000000000000000000
+            TextSettings.HorzAlign = Center
+            Text = 'Desde'
+            TabOrder = 2
+          end
+          object Label5: TLabel
+            Align = Right
+            StyledSettings = [Family, Style]
+            Margins.Left = 10.000000000000000000
+            Position.X = 297.000000000000000000
+            Size.Width = 180.000000000000000000
+            Size.Height = 50.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 15.000000000000000000
+            Text = 'Cargo'
+            TabOrder = 1
+          end
+          object Label6: TLabel
+            Align = Client
+            StyledSettings = [Family, Style]
+            Margins.Left = 10.000000000000000000
+            Size.Width = 197.000000000000000000
+            Size.Height = 50.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 15.000000000000000000
+            Text = 'Nome'
+            TabOrder = 0
+          end
+          object Label7: TLabel
+            Align = Right
+            StyledSettings = [Family, Style]
+            Margins.Left = 10.000000000000000000
+            Position.X = 707.000000000000000000
+            Size.Width = 120.000000000000000000
+            Size.Height = 50.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 15.000000000000000000
+            TextSettings.HorzAlign = Center
+            Text = 'A'#231#227'o'
+            TabOrder = 3
+          end
+        end
+        object vrtscrlbx1: TVertScrollBox
+          Align = Client
+          Size.Width = 827.000000000000000000
+          Size.Height = 452.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 1
+          Viewport.Width = 827.000000000000000000
+          Viewport.Height = 452.000000000000000000
+        end
+      end
+    end
+  end
+end

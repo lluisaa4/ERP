@@ -1,0 +1,136 @@
+unit acerp.resources.impl.configuracao;
+
+interface
+
+uses
+  acerp.resources.interfaces;
+
+type
+  TConfiguracao = class(TInterfacedObject, iConfiguracao)
+  private
+    FDriverID: string;
+    FDataBase: string;
+    FUserName: string;
+    FPassword: string;
+    FPort: string;
+    FServer: string;
+    FSchema: string;
+    FLocking: string;
+
+  public
+    class function New: iConfiguracao;
+
+    function DriverID(Value: string): iConfiguracao; overload;
+    function DriverID: string; overload;
+    function DataBase(Value: string): iConfiguracao; overload;
+    function DataBase: string; overload;
+    function UserName(Value: string): iConfiguracao; overload;
+    function UserName: string; overload;
+    function Password(Value: string): iConfiguracao; overload;
+    function Password: string; overload;
+    function Port(Value: string): iConfiguracao; overload;
+    function Port: string; overload;
+    function Server(Value: string): iConfiguracao; overload;
+    function Server: string; overload;
+    function Schema(Value: string): iConfiguracao; overload;
+    function Schema: string; overload;
+    function Locking(Value: string): iConfiguracao; overload;
+    function Locking: string; overload;
+  end;
+
+implementation
+
+function TConfiguracao.DataBase: string;
+begin
+  Result := FDataBase;
+end;
+
+function TConfiguracao.DataBase(Value: string): iConfiguracao;
+begin
+  Result := Self;
+  FDataBase := Value;
+end;
+
+function TConfiguracao.DriverID: string;
+begin
+  Result := FDriverID;
+end;
+
+function TConfiguracao.DriverID(Value: string): iConfiguracao;
+begin
+  Result := Self;
+  FDriverID := Value;
+end;
+
+function TConfiguracao.Locking: string;
+begin
+  Result := FLocking;
+end;
+
+function TConfiguracao.Locking(Value: string): iConfiguracao;
+begin
+  Result := Self;
+  FLocking := Value;
+end;
+
+class function TConfiguracao.New: iConfiguracao;
+begin
+  Result := Self.Create;
+end;
+
+function TConfiguracao.Password: string;
+begin
+  Result := FPassword;
+end;
+
+function TConfiguracao.Password(Value: string): iConfiguracao;
+begin
+  Result := Self;
+  FPassword := Value;
+end;
+
+function TConfiguracao.Port(Value: string): iConfiguracao;
+begin
+  Result := Self;
+  FPort := Value;
+end;
+
+function TConfiguracao.Port: string;
+begin
+  Result := FPort;
+end;
+
+function TConfiguracao.Schema: string;
+begin
+  Result := FSchema;
+end;
+
+function TConfiguracao.Schema(Value: string): iConfiguracao;
+begin
+  Result := Self;
+  FSchema := Value;
+end;
+
+function TConfiguracao.Server(Value: string): iConfiguracao;
+begin
+  Result := Self;
+  FServer := Value;
+end;
+
+function TConfiguracao.Server: string;
+begin
+  Result := FServer;
+end;
+
+function TConfiguracao.UserName(Value: string): iConfiguracao;
+begin
+  Result := Self;
+  FUserName := Value;
+end;
+
+function TConfiguracao.UserName: string;
+begin
+  Result := FUserName;
+end;
+
+end.

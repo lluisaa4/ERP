@@ -1,0 +1,16 @@
+object ComponentExtenderTables: TComponentExtenderTables
+  Size.Width = 749.000000000000000000
+  Size.Height = 531.000000000000000000
+  Size.PlatformDefault = False
+  object lytContainer: TLayout
+    Align = Client
+    Padding.Left = 10.000000000000000000
+    Padding.Top = 10.000000000000000000
+    Padding.Right = 10.000000000000000000
+    Padding.Bottom = 10.000000000000000000
+    Size.Width = 749.000000000000000000
+    Size.Height = 531.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+  end
+end

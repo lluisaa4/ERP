@@ -1,0 +1,48 @@
+unit acerp.view.pages.listapessoas;
+
+interface
+
+uses
+  System.SysUtils,
+  System.Types,
+  System.UITypes,
+  System.Classes,
+  System.Variants,
+  FMX.Types,
+  FMX.Controls,
+  FMX.Forms,
+  FMX.Graphics,
+  FMX.Dialogs,
+  FMX.Layouts,
+  Router4D.Interfaces;
+
+type
+  TForm1 = class(TForm)
+    lytContainer: TLayout;
+  private
+    { Private declarations }
+  public
+    function Render: TFmxObject;
+    procedure UnRender;
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.fmx}
+
+{ TForm1 }
+
+function TForm1.Render: TFmxObject;
+begin
+  Result := lytContainer;
+end;
+
+procedure TForm1.UnRender;
+begin
+
+end;
+
+end.

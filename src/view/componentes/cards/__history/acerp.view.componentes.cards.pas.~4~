@@ -1,0 +1,105 @@
+unit acerp.view.componentes.cards;
+
+interface
+
+uses
+  System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants, 
+  FMX.Types, FMX.Graphics, FMX.Controls, FMX.Forms, FMX.Dialogs, FMX.StdCtrls,
+  FMX.Layouts, FMX.Objects, FMX.Effects, FMX.Controls.Presentation;
+
+type
+  TComponentCard = class(TFrame)
+    lytContainer: TLayout;
+    rctngl1: TRectangle;
+    lytTitulo: TLayout;
+    lytRodape: TLayout;
+    ln1: TLine;
+    lyt1: TLayout;
+    imageRodape: TImage;
+    lyt2: TLayout;
+    lblDescricaoRodape: TLabel;
+    lyt3: TLayout;
+    lyt4: TLayout;
+    imageTitulo: TImage;
+    lyt5: TLayout;
+    lblTItulo: TLabel;
+    lblSubTitulo: TLabel;
+    ShadowEffect1: TShadowEffect;
+  private
+    { Private declarations }
+  public
+    class function New(AOwner: TComponent): TComponentCard;
+    function Nome(Value: string): TComponentCard;
+    function Titulo(Value: string; Color:TAlphaColor = $FFD8859A): TComponentCard;
+    function SubTitulo(Value: string; Color:TAlphaColor = $FFD8859A): TcomponentCard;
+    function ImageTitulo(Value: string; Color: TAlphaColor): TComponentCard;
+    function Descricao(Value: string; Color:TAlphaColor = $FFD8859A): TComponentCard;
+    function ImagemDescricao(Value: string; Color: TAlphaColor): TComponentCard;
+    function Alinhamento(Value: TAlignLayout): TComponentCard;
+    function Marge(Bottom, Left, Right, Top: Single): TComponentCard;
+    function Build: TFmxObject;
+  end;
+
+implementation
+
+{$R *.fmx}
+
+{ TComponentCard }
+
+function TComponentCard.Alinhamento(Value: TAlignLayout): TComponentCard;
+begin
+  Result := Self;
+  lytContainer.Align := TAlignLayout.None;
+  lytContainer.Align := Value;
+end;
+
+function TComponentCard.Build: TFmxObject;
+begin
+  Result := lytContainer;
+end;
+
+function TComponentCard.Descricao(Value: string): TComponentCard;
+begin
+  Result := Self;
+  lblDescricaoRodape.Text := Value;
+  lblDescricaoRodape.
+end;
+
+function TComponentCard.ImagemDescricao(Value: string;
+  Color: TAlphaColor): TComponentCard;
+begin
+
+end;
+
+function TComponentCard.ImageTitulo(Value: string;
+  Color: TAlphaColor): TComponentCard;
+begin
+
+end;
+
+function TComponentCard.Marge(Bottom, Left, Right, Top: Single): TComponentCard;
+begin
+
+end;
+
+class function TComponentCard.New(AOwner: TComponent): TComponentCard;
+begin
+  Result := Self.Create(AOwner);
+end;
+
+function TComponentCard.Nome(Value: string): TComponentCard;
+begin
+
+end;
+
+function TComponentCard.SubTitulo(Value: string; Color:TAlphaColor = $FFD8859A): TcomponentCard;
+begin
+
+end;
+
+function TComponentCard.Titulo(Value: string; Color:TAlphaColor = $FFD8859A): TComponentCard;
+begin
+
+end;
+
+end.

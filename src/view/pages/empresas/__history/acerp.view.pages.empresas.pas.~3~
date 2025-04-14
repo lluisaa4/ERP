@@ -1,0 +1,307 @@
+unit acerp.view.pages.empresas;
+
+interface
+
+uses
+  System.SysUtils,
+  System.Types,
+  System.UITypes,
+  System.Classes,
+  System.Variants,
+  FMX.Types,
+  FMX.Controls,
+  FMX.Forms,
+  FMX.Graphics,
+  FMX.Dialogs,
+  FMX.Effects,
+  FMX.Objects,
+  FMX.Controls.Presentation,
+  FMX.StdCtrls,
+  FMX.Layouts,
+  Router4D.Interfaces,
+  Router4D.Props,
+  acerp.view.components.interfaces,
+  acerp.view.componentes.edits;
+
+type
+  TPageEmpresa = class(TForm, iRouter4DComponent)
+    lytContainer: TLayout;
+    lyt1: TLayout;
+    lyt2: TLayout;
+    rctngl1: TRectangle;
+    layout1: TLayout;
+    lyt3: TLayout;
+    Label1: TLabel;
+    lyt5: TLayout;
+    lyt9: TLayout;
+    lyt8: TLayout;
+    lyt7: TLayout;
+    lyt6: TLayout;
+    shdwfct1: TShadowEffect;
+    lyt13: TLayout;
+    lyt14: TLayout;
+    rndrct1: TRoundRect;
+    Label8: TLabel;
+    lytButton: TLayout;
+    procedure lytButtonMouseEnter(Sender: TObject);
+    procedure lytButtonMouseLeave(Sender: TObject);
+    procedure lyt2Resized(Sender: TObject);
+
+  private
+    procedure MontarEdit;
+    procedure MotaPrimeiroBLoco(Margem: TEditMargins);
+    procedure MotaSegundoBLoco(Margem: TEditMargins);
+    procedure MotaTerceiroBLoco(Margem: TEditMargins);
+    procedure MotaQuartoBLoco(Margem: TEditMargins);
+    procedure MotaQuintoBLoco(Margem: TEditMargins);
+    procedure MotaSextoBLoco(Margem: TEditMargins);
+  public
+    function Render: TFMXObject;
+    procedure UnRender;
+    [Subscribe]
+    procedure Props(aValue: TProps);
+  end;
+
+implementation
+
+{$R *.fmx}
+
+
+uses
+  acerp.view.componentes.edits2,
+  acerp.view.componentes.editsarea,
+  acerp.services.enums;
+
+procedure TPageEmpresa.lyt2Resized(Sender: TObject);
+begin
+  var lWidth : Single;
+
+  for var I := 0 to Pred(lyt5.ChildrenCount) do
+     lWidth := lWidth + TLayout(lyt5.Children[I]).Width;
+
+  if not (lWidth = 0) then
+    lyt2.Padding.Right := lWidth-50;
+end;
+
+procedure TPageEmpresa.lytButtonMouseEnter(Sender: TObject);
+begin
+  rndrct1.Fill.Color := $FF2ba9cd;
+end;
+
+procedure TPageEmpresa.lytButtonMouseLeave(Sender: TObject);
+begin
+  rndrct1.Fill.Color := $FF0CB5B5;
+end;
+
+procedure TPageEmpresa.MontarEdit;
+begin
+  var lMargem: TEditMargins;
+  lMargem.Right := 10;
+
+  MotaPrimeiroBLoco(lMargem);
+  MotaSegundoBLoco(lMargem);
+  MotaTerceiroBLoco(lMargem);
+  MotaQuartoBLoco(lMargem);
+  MotaQuintoBLoco(lMargem);
+  MotaSextoBLoco(lMargem);
+end;
+
+procedure TPageEmpresa.MotaPrimeiroBLoco(Margem: TEditMargins);
+begin
+  lyt5.AddObject(
+  TComponentEdit.New(Self)
+      .Titulo('CRT')
+      .Alinhamento(TAlignLayout.Left)
+      .Largura(100)
+      .Margem(Margem)
+      .PlaceHolder('CRT')
+      .Build);
+
+  lyt5.AddObject(
+  TComponentEdit.New(Self)
+      .Titulo('IE')
+      .Alinhamento(TAlignLayout.Left)
+      .Largura(200)
+      .Margem(Margem)
+      .PlaceHolder('IE')
+      .Build);
+
+  lyt5.AddObject(
+  TComponentEdit.New(Self)
+      .Titulo('IM')
+      .Alinhamento(TAlignLayout.Left)
+      .Largura(200)
+      .Margem(Margem)
+      .PlaceHolder('IM')
+      .Build);
+
+  lyt5.AddObject(
+  TComponentEdit.New(Self)
+      .Titulo('CNAE')
+      .Alinhamento(TAlignLayout.Left)
+      .Largura(200)
+      .Margem(Margem)
+      .PlaceHolder('CNAE')
+      .Build);
+
+  lyt5.AddObject(
+  TComponentEdit.New(Self)
+      .Titulo('CNPJ')
+      .Alinhamento(TAlignLayout.Left)
+      .Largura(190)
+      .Margem(Margem)
+      .PlaceHolder('CNPJ')
+      .Build);
+end;
+
+procedure TPageEmpresa.MotaQuartoBLoco(Margem: TEditMargins);
+begin
+  lyt8.AddObject(
+  TComponentEdit.New(Self)
+      .Titulo('Bairro')
+      .Alinhamento(TAlignLayout.Left)
+      .Largura(400)
+      .Margem(Margem)
+      .PlaceHolder('Bairro')
+      .Build);
+
+  lyt8.AddObject(
+  TComponentEdit.New(Self)
+      .Titulo('Estado')
+      .Alinhamento(TAlignLayout.Left)
+      .Largura(110)
+      .Margem(Margem)
+      .PlaceHolder('Estado')
+      .Build);
+
+  lyt8.AddObject(
+  TComponentEdit.New(Self)
+      .Titulo('Cidade')
+      .Alinhamento(TAlignLayout.Left)
+      .Largura(400)
+      .Margem(Margem)
+      .PlaceHolder('Cidade')
+      .Build);
+end;
+
+procedure TPageEmpresa.MotaQuintoBLoco(Margem: TEditMargins);
+begin
+  lyt9.AddObject(
+  TComponentEdit.New(Self)
+      .Titulo('Telefone')
+      .Alinhamento(TAlignLayout.Left)
+      .Largura(300)
+      .Margem(Margem)
+      .PlaceHolder('Telefone')
+      .Build);
+
+  lyt9.AddObject(
+  TComponentEdit.New(Self)
+      .Titulo('E-Mail')
+      .Alinhamento(TAlignLayout.Left)
+      .Largura(620)
+      .Margem(Margem)
+      .PlaceHolder('E-Mail')
+      .Build);
+end;
+
+procedure TPageEmpresa.MotaSegundoBLoco(Margem: TEditMargins);
+begin
+  lyt6.AddObject(
+  TComponentEdit.New(Self)
+      .Titulo('Razão Social')
+      .Alinhamento(TAlignLayout.Left)
+      .Largura(460)
+      .Margem(Margem)
+      .PlaceHolder('Razão Social')
+      .Build);
+
+  lyt6.AddObject(
+  TComponentEdit.New(Self)
+      .Titulo('Nome fantasia')
+      .Alinhamento(TAlignLayout.Left)
+      .Largura(460)
+      .Margem(Margem)
+      .PlaceHolder('Nome fantasia')
+      .Build);
+end;
+
+procedure TPageEmpresa.MotaSextoBLoco(Margem: TEditMargins);
+begin
+  lyt3.AddObject(
+  TComponentEdit.New(Self)
+      .Titulo('Observação')
+      .Alinhamento(TAlignLayout.Left)
+      .Largura(930)
+      .Margem(Margem)
+      .PlaceHolder('Observação')
+      .Build);
+end;
+
+procedure TPageEmpresa.MotaTerceiroBLoco(Margem: TEditMargins);
+begin
+  lyt7.AddObject(
+  TComponentEdit.New(Self)
+      .Titulo('Cep')
+      .Alinhamento(TAlignLayout.Left)
+      .Largura(100)
+      .Margem(Margem)
+      .PlaceHolder('Cep')
+      .Build);
+
+  lyt7.AddObject(
+  TComponentEdit.New(Self)
+      .Titulo('Logradouro')
+      .Alinhamento(TAlignLayout.Left)
+      .Largura(500)
+      .Margem(Margem)
+      .PlaceHolder('Logradouro')
+      .Build);
+
+  lyt7.AddObject(
+  TComponentEdit.New(Self)
+      .Titulo('Numero')
+      .Alinhamento(TAlignLayout.Left)
+      .Largura(100)
+      .Margem(Margem)
+      .PlaceHolder('Numero')
+      .Build);
+
+  lyt7.AddObject(
+  TComponentEdit.New(Self)
+      .Titulo('Complemento')
+      .Alinhamento(TAlignLayout.Left)
+      .Largura(200)
+      .Margem(Margem)
+      .PlaceHolder('Complemento')
+      .Build);
+end;
+
+procedure TPageEmpresa.Props(aValue: TProps);
+begin
+  var lTipo: TTipoAcao;
+  case lTipo.ToEnum(aValue.Key) of
+    EDITAR: Label1.Text := 'Editar Empresa';
+    NOVO: Label1.Text := 'Cadastrar Empresa';
+  end;
+end;
+
+function TPageEmpresa.Render: TFMXObject;
+begin
+  Result := lytContainer;
+  MontarEdit;
+  procedure MontarEdit;
+  procedure MotaPrimeiroBLoco(Margem: TEditMargins);
+  procedure MotaSegundoBLoco(Margem: TEditMargins);
+  procedure MotaTerceiroBLoco(Margem: TEditMargins);
+  procedure MotaQuartoBLoco(Margem: TEditMargins);
+  procedure MotaQuintoBLoco(Margem: TEditMargins);
+  procedure MotaSextoBLoco(Margem: TEditMargins);
+end;
+
+procedure TPageEmpresa.UnRender;
+begin
+
+end;
+
+end.

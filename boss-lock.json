@@ -1,0 +1,30 @@
+{
+	"hash": "d41d8cd98f00b204e9800998ecf8427e",
+	"updated": "2025-03-26T14:42:29.2953771-03:00",
+	"installedModules": {
+		"github.com/academiadocodigo/tbgwebcharts": {
+			"name": "tbgwebcharts",
+			"version": "1.0.0",
+			"hash": "d7942f5d0f7be04ddfd973d27f45e768",
+			"artifacts": {},
+			"failed": false,
+			"changed": false
+		},
+		"https://github.com/academiadocodigo/localcache4d": {
+			"name": "localcache4d",
+			"version": "1.0.4",
+			"hash": "78a7747cc7f2f79822d67610672800a5",
+			"artifacts": {},
+			"failed": false,
+			"changed": false
+		},
+		"https://github.com/bittencourtthulio/router4delphi": {
+			"name": "router4delphi",
+			"version": "1.1.3",
+			"hash": "c181005318d6491bf24823d3c1e2f342",
+			"artifacts": {},
+			"failed": false,
+			"changed": false
+		}
+	}
+}

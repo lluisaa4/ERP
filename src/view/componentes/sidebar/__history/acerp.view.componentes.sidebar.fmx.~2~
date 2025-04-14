@@ -1,0 +1,70 @@
+object ComponentSidebar: TComponentSidebar
+  Size.Width = 250.000000000000000000
+  Size.Height = 552.000000000000000000
+  Size.PlatformDefault = False
+  object lytContainer: TLayout
+    Align = Client
+    Size.Width = 250.000000000000000000
+    Size.Height = 552.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object lyt1: TLayout
+      Align = Top
+      Size.Width = 250.000000000000000000
+      Size.Height = 117.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      object lyt2: TLayout
+        Align = Top
+        Padding.Left = 20.000000000000000000
+        Padding.Top = 10.000000000000000000
+        Padding.Right = 20.000000000000000000
+        Padding.Bottom = 10.000000000000000000
+        Size.Width = 250.000000000000000000
+        Size.Height = 50.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+      end
+      object lyt3: TLayout
+        Align = Client
+        Padding.Left = 20.000000000000000000
+        Padding.Top = 10.000000000000000000
+        Padding.Right = 20.000000000000000000
+        Padding.Bottom = 10.000000000000000000
+        Size.Width = 250.000000000000000000
+        Size.Height = 67.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        object ln1: TLine
+          Align = Top
+          LineType = Top
+          Position.X = 20.000000000000000000
+          Position.Y = 10.000000000000000000
+          Size.Width = 210.000000000000000000
+          Size.Height = 1.000000000000000000
+          Size.PlatformDefault = False
+        end
+        object ln2: TLine
+          Align = Bottom
+          LineType = Bottom
+          Position.X = 20.000000000000000000
+          Position.Y = 56.000000000000000000
+          Size.Width = 210.000000000000000000
+          Size.Height = 1.000000000000000000
+          Size.PlatformDefault = False
+        end
+        object lyt4: TLayout
+          Align = Client
+          Padding.Left = 10.000000000000000000
+          Padding.Top = 10.000000000000000000
+          Padding.Right = 10.000000000000000000
+          Padding.Bottom = 10.000000000000000000
+          Size.Width = 210.000000000000000000
+          Size.Height = 45.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 2
+        end
+      end
+    end
+  end
+end

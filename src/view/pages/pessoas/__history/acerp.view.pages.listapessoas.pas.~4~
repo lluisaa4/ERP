@@ -1,0 +1,70 @@
+unit acerp.view.pages.listapessoas;
+
+interface
+
+uses
+  System.SysUtils,
+  System.Types,
+  System.UITypes,
+  System.Classes,
+  System.Variants,
+  System.Generics.Collections,
+  FMX.Types,
+  FMX.Controls,
+  FMX.Forms,
+  FMX.Graphics,
+  FMX.Dialogs,
+  FMX.Layouts,
+  Router4D.Interfaces;
+
+type
+  TPageListaPessoas = class(TForm, iRouter4DComponent)
+    lytContainer: TLayout;
+  private
+    { Private declarations }
+  public
+    function Render: TFmxObject;
+    procedure UnRender;
+  end;
+
+var
+  PageListaPessoas: TPageListaPessoas;
+
+implementation
+
+uses
+  acerp.view.components.extendertables;
+
+{$R *.fmx}
+
+{ TForm1 }
+
+function TPageListaPessoas.Render: TFmxObject;
+begin
+  var lLista := TList<TTransfer>.create;
+  for var I := 0 to 10 do
+  begin
+    var lTransfer: TTransfer;
+    lTransfer.Nome := 'Frame' + I.ToString;
+    lTransfer.Item := I.ToString;
+    lTransfer.Descricao := 'Colaborador '+ I.ToString;
+    lTransfer.Cargo := 'Cargo ' + I.ToString;
+    lTransfer.Salario := Round(I);
+    lLista.Add(lTransfer);
+  end;
+
+  lytContainer.AddObject(
+    TComponentExtendedTables.New(Self)
+      .Titulo('Lista de Pessoas')
+      .ColorTitulo($FF86CFCE)
+    .Build(lLista));
+
+  Result := lytContainer;
+end;
+
+procedure TPageListaPessoas.UnRender;
+begin
+
+end;
+
+end.

@@ -1,0 +1,751 @@
+object PagePessoas: TPagePessoas
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 747
+  ClientWidth = 1142
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object lytContainer: TLayout
+    Align = Client
+    Size.Width = 1142.000000000000000000
+    Size.Height = 747.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object lyt1: TLayout
+      Align = Left
+      Padding.Left = 60.000000000000000000
+      Padding.Top = 60.000000000000000000
+      Padding.Right = 10.000000000000000000
+      Padding.Bottom = 225.000000000000000000
+      Size.Width = 409.000000000000000000
+      Size.Height = 747.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      object rctngl2: TRectangle
+        Align = Top
+        Fill.Color = claWhite
+        Position.X = 60.000000000000000000
+        Position.Y = 60.000000000000000000
+        Size.Width = 339.000000000000000000
+        Size.Height = 380.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Kind = None
+        XRadius = 10.000000000000000000
+        YRadius = 10.000000000000000000
+        object lyt4: TLayout
+          Align = Client
+          Size.Width = 339.000000000000000000
+          Size.Height = 380.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          object lytInfoPerfil: TLayout
+            Align = Bottom
+            Padding.Left = 20.000000000000000000
+            Padding.Right = 20.000000000000000000
+            Position.Y = 329.000000000000000000
+            Size.Width = 339.000000000000000000
+            Size.Height = 51.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 6
+            object lyt15: TLayout
+              Align = Client
+              Padding.Left = 22.000000000000000000
+              Padding.Right = 22.000000000000000000
+              Size.Width = 299.000000000000000000
+              Size.Height = 51.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 0
+              object lyt2323: TLayout
+                Align = Client
+                Padding.Left = 52.000000000000000000
+                Padding.Right = 52.000000000000000000
+                Size.Width = 155.000000000000000000
+                Size.Height = 51.000000000000000000
+                Size.PlatformDefault = False
+                TabOrder = 2
+                object lytUsed: TLayout
+                  Align = Client
+                  Padding.Top = 5.000000000000000000
+                  Padding.Bottom = 7.000000000000000000
+                  Size.Width = 51.000000000000000000
+                  Size.Height = 51.000000000000000000
+                  Size.PlatformDefault = False
+                  TabOrder = 0
+                  object Label4: TLabel
+                    Align = Top
+                    StyledSettings = [Family, Style, FontColor]
+                    Position.Y = 5.000000000000000000
+                    Size.Width = 51.000000000000000000
+                    Size.Height = 17.000000000000000000
+                    Size.PlatformDefault = False
+                    TextSettings.Font.Size = 15.000000000000000000
+                    TextSettings.HorzAlign = Center
+                    Text = '2GB'
+                    TabOrder = 0
+                  end
+                  object Label5: TLabel
+                    Align = Bottom
+                    StyledSettings = [Family, Style, FontColor]
+                    Position.Y = 27.000000000000000000
+                    Size.Width = 51.000000000000000000
+                    Size.Height = 17.000000000000000000
+                    Size.PlatformDefault = False
+                    TextSettings.HorzAlign = Center
+                    Text = 'Used'
+                    TabOrder = 1
+                  end
+                end
+              end
+              object lytFiles: TLayout
+                Align = Left
+                Padding.Top = 5.000000000000000000
+                Padding.Bottom = 7.000000000000000000
+                Position.X = 22.000000000000000000
+                Size.Width = 50.000000000000000000
+                Size.Height = 51.000000000000000000
+                Size.PlatformDefault = False
+                TabOrder = 0
+                object Label2: TLabel
+                  Align = Top
+                  StyledSettings = [Family, Style, FontColor]
+                  Position.Y = 5.000000000000000000
+                  Size.Width = 50.000000000000000000
+                  Size.Height = 17.000000000000000000
+                  Size.PlatformDefault = False
+                  TextSettings.Font.Size = 15.000000000000000000
+                  TextSettings.HorzAlign = Center
+                  Text = '12'
+                  TabOrder = 0
+                end
+                object Label3: TLabel
+                  Align = Bottom
+                  StyledSettings = [Family, Style, FontColor]
+                  Position.Y = 27.000000000000000000
+                  Size.Width = 50.000000000000000000
+                  Size.Height = 17.000000000000000000
+                  Size.PlatformDefault = False
+                  TextSettings.HorzAlign = Center
+                  Text = 'Files'
+                  TabOrder = 1
+                end
+              end
+              object lytSpent: TLayout
+                Align = Right
+                Padding.Top = 5.000000000000000000
+                Padding.Bottom = 7.000000000000000000
+                Position.X = 227.000000000000000000
+                Size.Width = 50.000000000000000000
+                Size.Height = 51.000000000000000000
+                Size.PlatformDefault = False
+                TabOrder = 1
+                object Label6: TLabel
+                  Align = Top
+                  StyledSettings = [Family, Style, FontColor]
+                  Position.Y = 5.000000000000000000
+                  Size.Width = 50.000000000000000000
+                  Size.Height = 17.000000000000000000
+                  Size.PlatformDefault = False
+                  TextSettings.Font.Size = 15.000000000000000000
+                  TextSettings.HorzAlign = Center
+                  Text = '24,6$'
+                  TabOrder = 0
+                end
+                object Label7: TLabel
+                  Align = Bottom
+                  StyledSettings = [Family, Style, FontColor]
+                  Position.Y = 27.000000000000000000
+                  Size.Width = 50.000000000000000000
+                  Size.Height = 17.000000000000000000
+                  Size.PlatformDefault = False
+                  TextSettings.HorzAlign = Center
+                  Text = 'Spent'
+                  TabOrder = 1
+                end
+              end
+            end
+          end
+          object lyt11: TLayout
+            Align = Client
+            Size.Width = 339.000000000000000000
+            Size.Height = 248.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 7
+            object lytPerfil: TLayout
+              Align = Top
+              Padding.Left = 130.000000000000000000
+              Padding.Top = 5.000000000000000000
+              Padding.Right = 130.000000000000000000
+              Padding.Bottom = 5.000000000000000000
+              Size.Width = 339.000000000000000000
+              Size.Height = 81.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 0
+              object lytImagePerfil: TLayout
+                Align = Client
+                Size.Width = 79.000000000000000000
+                Size.Height = 71.000000000000000000
+                Size.PlatformDefault = False
+                TabOrder = 0
+                object ImagePerfil: TImage
+                  MultiResBitmap = <
+                    item
+                    end>
+                  Align = Client
+                  Size.Width = 79.000000000000000000
+                  Size.Height = 71.000000000000000000
+                  Size.PlatformDefault = False
+                end
+              end
+            end
+            object lyt12: TLayout
+              Align = Client
+              Size.Width = 339.000000000000000000
+              Size.Height = 167.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 1
+              object lytNome: TLayout
+                Align = Top
+                Size.Width = 339.000000000000000000
+                Size.Height = 41.000000000000000000
+                Size.PlatformDefault = False
+                TabOrder = 0
+                object lblNome: TLabel
+                  Align = Client
+                  StyledSettings = [Family]
+                  Size.Width = 339.000000000000000000
+                  Size.Height = 41.000000000000000000
+                  Size.PlatformDefault = False
+                  TextSettings.Font.Size = 20.000000000000000000
+                  TextSettings.Font.StyleExt = {00070000000000000004000000}
+                  TextSettings.FontColor = xFFD8859A
+                  TextSettings.HorzAlign = Center
+                  Text = 'lblNome'
+                  TabOrder = 0
+                end
+              end
+              object lytUser: TLayout
+                Align = Top
+                Padding.Top = 5.000000000000000000
+                Position.Y = 41.000000000000000000
+                Size.Width = 339.000000000000000000
+                Size.Height = 32.000000000000000000
+                Size.PlatformDefault = False
+                TabOrder = 1
+                object lblUser: TLabel
+                  Align = Client
+                  StyledSettings = [Family, Style]
+                  Size.Width = 339.000000000000000000
+                  Size.Height = 27.000000000000000000
+                  Size.PlatformDefault = False
+                  TextSettings.Font.Size = 15.000000000000000000
+                  TextSettings.FontColor = claDarkgray
+                  TextSettings.HorzAlign = Center
+                  Text = 'lblUser'
+                  TabOrder = 0
+                end
+              end
+              object lytDescricao: TLayout
+                Align = Client
+                Padding.Bottom = 5.000000000000000000
+                Margins.Bottom = 5.000000000000000000
+                Size.Width = 339.000000000000000000
+                Size.Height = 89.000000000000000000
+                Size.PlatformDefault = False
+                TabOrder = 2
+                object lblDescricao: TLabel
+                  Align = Client
+                  StyledSettings = [Family, Style]
+                  Size.Width = 339.000000000000000000
+                  Size.Height = 83.000000000000000000
+                  Size.PlatformDefault = False
+                  TextSettings.Font.Size = 15.000000000000000000
+                  TextSettings.FontColor = claDarkgray
+                  TextSettings.HorzAlign = Center
+                  Text = 'lblDescricao'
+                  TabOrder = 0
+                end
+                object ln1: TLine
+                  Align = Bottom
+                  LineType = Top
+                  Position.Y = 83.000000000000000000
+                  Size.Width = 339.000000000000000000
+                  Size.Height = 1.000000000000000000
+                  Size.PlatformDefault = False
+                  Stroke.Color = claDarkgray
+                end
+              end
+            end
+          end
+          object lytImageCapa: TLayout
+            Align = Top
+            Size.Width = 339.000000000000000000
+            Size.Height = 81.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 8
+            object imageCapa: TImage
+              MultiResBitmap = <
+                item
+                end>
+              Align = Client
+              Size.Width = 339.000000000000000000
+              Size.Height = 81.000000000000000000
+              Size.PlatformDefault = False
+              ParentShowHint = False
+              ShowHint = False
+            end
+          end
+        end
+      end
+      object lyt10: TLayout
+        Align = Client
+        Padding.Top = 20.000000000000000000
+        Size.Width = 339.000000000000000000
+        Size.Height = 82.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        object rctngl3: TRectangle
+          Align = Client
+          Fill.Color = claWhite
+          Padding.Left = 10.000000000000000000
+          Padding.Right = 10.000000000000000000
+          Size.Width = 339.000000000000000000
+          Size.Height = 62.000000000000000000
+          Size.PlatformDefault = False
+          Stroke.Kind = None
+          XRadius = 10.000000000000000000
+          YRadius = 10.000000000000000000
+          object lytTItulo: TLayout
+            Align = Top
+            Position.X = 10.000000000000000000
+            Size.Width = 319.000000000000000000
+            Size.Height = 50.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            object lblTeamMembers: TLabel
+              Align = Client
+              StyledSettings = [Family, Style, FontColor]
+              Size.Width = 319.000000000000000000
+              Size.Height = 50.000000000000000000
+              Size.PlatformDefault = False
+              TextSettings.Font.Size = 22.000000000000000000
+              Text = 'Team Members'
+              TabOrder = 0
+            end
+          end
+          object lytTeamMembers: TLayout
+            Align = Bottom
+            Padding.Top = 10.000000000000000000
+            Padding.Bottom = 10.000000000000000000
+            Margins.Top = 5.000000000000000000
+            Position.X = 10.000000000000000000
+            Position.Y = -165.000000000000000000
+            Size.Width = 319.000000000000000000
+            Size.Height = 227.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 1
+            object lytMember1: TLayout
+              Align = Top
+              Position.Y = 10.000000000000000000
+              Size.Width = 319.000000000000000000
+              Size.Height = 50.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 0
+              object rctFoto1: TRectangle
+                Align = Left
+                Size.Width = 50.000000000000000000
+                Size.Height = 50.000000000000000000
+                Size.PlatformDefault = False
+                Stroke.Kind = None
+                XRadius = 20.000000000000000000
+                YRadius = 20.000000000000000000
+                object img1: TImage
+                  MultiResBitmap = <
+                    item
+                    end>
+                  Align = Client
+                  Size.Width = 50.000000000000000000
+                  Size.Height = 50.000000000000000000
+                  Size.PlatformDefault = False
+                end
+              end
+              object lyt16: TLayout
+                Align = Client
+                Size.Width = 269.000000000000000000
+                Size.Height = 50.000000000000000000
+                Size.PlatformDefault = False
+                TabOrder = 1
+                object lytIcone1: TLayout
+                  Align = Right
+                  Padding.Top = 10.000000000000000000
+                  Padding.Bottom = 10.000000000000000000
+                  Position.X = 232.000000000000000000
+                  Size.Width = 37.000000000000000000
+                  Size.Height = 50.000000000000000000
+                  Size.PlatformDefault = False
+                  TabOrder = 0
+                  object rctIcone1: TRectangle
+                    Align = Client
+                    Size.Width = 37.000000000000000000
+                    Size.Height = 30.000000000000000000
+                    Size.PlatformDefault = False
+                    Stroke.Kind = None
+                    XRadius = 15.000000000000000000
+                    YRadius = 15.000000000000000000
+                    object imgIcone1: TImage
+                      MultiResBitmap = <
+                        item
+                        end>
+                      Align = Client
+                      Size.Width = 37.000000000000000000
+                      Size.Height = 30.000000000000000000
+                      Size.PlatformDefault = False
+                    end
+                  end
+                end
+                object lytInfos: TLayout
+                  Align = Client
+                  Padding.Left = 25.000000000000000000
+                  Padding.Bottom = 9.000000000000000000
+                  Size.Width = 232.000000000000000000
+                  Size.Height = 50.000000000000000000
+                  Size.PlatformDefault = False
+                  TabOrder = 1
+                  object lblNome1: TLabel
+                    Align = Top
+                    StyledSettings = [Family, Style, FontColor]
+                    Position.X = 25.000000000000000000
+                    Size.Width = 207.000000000000000000
+                    Size.Height = 17.000000000000000000
+                    Size.PlatformDefault = False
+                    TextSettings.Font.Size = 15.000000000000000000
+                    Text = 'DJ Khaled'
+                    TabOrder = 0
+                  end
+                  object lblStatus1: TLabel
+                    Align = Bottom
+                    StyledSettings = [Family, Style]
+                    Position.X = 25.000000000000000000
+                    Position.Y = 24.000000000000000000
+                    Size.Width = 207.000000000000000000
+                    Size.Height = 17.000000000000000000
+                    Size.PlatformDefault = False
+                    TextSettings.FontColor = claDarkgray
+                    Text = 'Offline'
+                    TabOrder = 1
+                  end
+                end
+              end
+            end
+            object lytContainerMember2e3: TLayout
+              Align = Client
+              Padding.Top = 15.000000000000000000
+              Size.Width = 319.000000000000000000
+              Size.Height = 157.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 1
+              object lytMember2: TLayout
+                Align = Top
+                Position.Y = 15.000000000000000000
+                Size.Width = 319.000000000000000000
+                Size.Height = 50.000000000000000000
+                Size.PlatformDefault = False
+                TabOrder = 0
+                object rctFoto2: TRectangle
+                  Align = Left
+                  Size.Width = 50.000000000000000000
+                  Size.Height = 50.000000000000000000
+                  Size.PlatformDefault = False
+                  Stroke.Kind = None
+                  XRadius = 20.000000000000000000
+                  YRadius = 20.000000000000000000
+                  object img2: TImage
+                    MultiResBitmap = <
+                      item
+                      end>
+                    Align = Client
+                    Size.Width = 50.000000000000000000
+                    Size.Height = 50.000000000000000000
+                    Size.PlatformDefault = False
+                  end
+                end
+                object Layout3: TLayout
+                  Align = Client
+                  Size.Width = 269.000000000000000000
+                  Size.Height = 50.000000000000000000
+                  Size.PlatformDefault = False
+                  TabOrder = 1
+                  object Layout4: TLayout
+                    Align = Right
+                    Padding.Top = 10.000000000000000000
+                    Padding.Bottom = 10.000000000000000000
+                    Position.X = 232.000000000000000000
+                    Size.Width = 37.000000000000000000
+                    Size.Height = 50.000000000000000000
+                    Size.PlatformDefault = False
+                    TabOrder = 0
+                    object Rectangle2: TRectangle
+                      Align = Client
+                      Size.Width = 37.000000000000000000
+                      Size.Height = 30.000000000000000000
+                      Size.PlatformDefault = False
+                      Stroke.Kind = None
+                      XRadius = 15.000000000000000000
+                      YRadius = 15.000000000000000000
+                      object imgIcone2: TImage
+                        MultiResBitmap = <
+                          item
+                          end>
+                        Align = Client
+                        Size.Width = 37.000000000000000000
+                        Size.Height = 30.000000000000000000
+                        Size.PlatformDefault = False
+                      end
+                    end
+                  end
+                  object Layout5: TLayout
+                    Align = Client
+                    Padding.Left = 25.000000000000000000
+                    Padding.Bottom = 9.000000000000000000
+                    Size.Width = 232.000000000000000000
+                    Size.Height = 50.000000000000000000
+                    Size.PlatformDefault = False
+                    TabOrder = 1
+                    object lblNome2: TLabel
+                      Align = Top
+                      StyledSettings = [Family, Style, FontColor]
+                      Position.X = 25.000000000000000000
+                      Size.Width = 207.000000000000000000
+                      Size.Height = 17.000000000000000000
+                      Size.PlatformDefault = False
+                      TextSettings.Font.Size = 15.000000000000000000
+                      Text = 'Creative Tim'
+                      TabOrder = 0
+                    end
+                    object lblStatus2: TLabel
+                      Align = Bottom
+                      StyledSettings = [Family, Style]
+                      Position.X = 25.000000000000000000
+                      Position.Y = 24.000000000000000000
+                      Size.Width = 207.000000000000000000
+                      Size.Height = 17.000000000000000000
+                      Size.PlatformDefault = False
+                      TextSettings.FontColor = xFF3FBD77
+                      Text = 'Available'
+                      TabOrder = 1
+                    end
+                  end
+                end
+              end
+              object lytContainerMember3: TLayout
+                Align = Client
+                Padding.Top = 15.000000000000000000
+                Size.Width = 319.000000000000000000
+                Size.Height = 92.000000000000000000
+                Size.PlatformDefault = False
+                TabOrder = 1
+                object lytMember3: TLayout
+                  Align = Top
+                  Position.Y = 15.000000000000000000
+                  Size.Width = 319.000000000000000000
+                  Size.Height = 50.000000000000000000
+                  Size.PlatformDefault = False
+                  TabOrder = 0
+                  object Rectangle3: TRectangle
+                    Align = Left
+                    Size.Width = 50.000000000000000000
+                    Size.Height = 50.000000000000000000
+                    Size.PlatformDefault = False
+                    Stroke.Kind = None
+                    XRadius = 20.000000000000000000
+                    YRadius = 20.000000000000000000
+                    object img3: TImage
+                      MultiResBitmap = <
+                        item
+                        end>
+                      Align = Client
+                      Size.Width = 50.000000000000000000
+                      Size.Height = 50.000000000000000000
+                      Size.PlatformDefault = False
+                    end
+                  end
+                  object Layout7: TLayout
+                    Align = Client
+                    Size.Width = 269.000000000000000000
+                    Size.Height = 50.000000000000000000
+                    Size.PlatformDefault = False
+                    TabOrder = 1
+                    object Layout8: TLayout
+                      Align = Right
+                      Padding.Top = 10.000000000000000000
+                      Padding.Bottom = 10.000000000000000000
+                      Position.X = 232.000000000000000000
+                      Size.Width = 37.000000000000000000
+                      Size.Height = 50.000000000000000000
+                      Size.PlatformDefault = False
+                      TabOrder = 0
+                      object Rectangle4: TRectangle
+                        Align = Client
+                        Size.Width = 37.000000000000000000
+                        Size.Height = 30.000000000000000000
+                        Size.PlatformDefault = False
+                        Stroke.Kind = None
+                        XRadius = 15.000000000000000000
+                        YRadius = 15.000000000000000000
+                        object imgIcone3: TImage
+                          MultiResBitmap = <
+                            item
+                            end>
+                          Align = Client
+                          Size.Width = 37.000000000000000000
+                          Size.Height = 30.000000000000000000
+                          Size.PlatformDefault = False
+                        end
+                      end
+                    end
+                    object Layout9: TLayout
+                      Align = Client
+                      Padding.Left = 25.000000000000000000
+                      Padding.Bottom = 9.000000000000000000
+                      Size.Width = 232.000000000000000000
+                      Size.Height = 50.000000000000000000
+                      Size.PlatformDefault = False
+                      TabOrder = 1
+                      object lblNome3: TLabel
+                        Align = Top
+                        StyledSettings = [Family, Style, FontColor]
+                        Position.X = 25.000000000000000000
+                        Size.Width = 207.000000000000000000
+                        Size.Height = 17.000000000000000000
+                        Size.PlatformDefault = False
+                        TextSettings.Font.Size = 15.000000000000000000
+                        Text = 'Flume'
+                        TabOrder = 0
+                      end
+                      object lblStatus3: TLabel
+                        Align = Bottom
+                        StyledSettings = [Family, Style]
+                        Position.X = 25.000000000000000000
+                        Position.Y = 24.000000000000000000
+                        Size.Width = 207.000000000000000000
+                        Size.Height = 17.000000000000000000
+                        Size.PlatformDefault = False
+                        TextSettings.FontColor = claOrangered
+                        Text = 'Busy'
+                        TabOrder = 1
+                      end
+                    end
+                  end
+                end
+              end
+            end
+          end
+        end
+      end
+    end
+    object lyt2: TLayout
+      Align = Client
+      Padding.Left = 20.000000000000000000
+      Padding.Top = 60.000000000000000000
+      Padding.Right = 440.000000000000000000
+      Size.Width = 733.000000000000000000
+      Size.Height = 747.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      object rctngl1: TRectangle
+        Align = Top
+        Fill.Color = claWhite
+        Padding.Left = 25.000000000000000000
+        Padding.Top = 10.000000000000000000
+        Padding.Right = 10.000000000000000000
+        Padding.Bottom = 10.000000000000000000
+        Position.X = 20.000000000000000000
+        Position.Y = 60.000000000000000000
+        Size.Width = 273.000000000000000000
+        Size.Height = 429.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Kind = None
+        XRadius = 10.000000000000000000
+        YRadius = 10.000000000000000000
+        object layout1: TLayout
+          Align = Client
+          Size.Width = 238.000000000000000000
+          Size.Height = 409.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          object lyt3: TLayout
+            Align = Top
+            Size.Width = 238.000000000000000000
+            Size.Height = 60.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            object Label1: TLabel
+              Align = Client
+              StyledSettings = [Family, Style, FontColor]
+              Size.Width = 238.000000000000000000
+              Size.Height = 60.000000000000000000
+              Size.PlatformDefault = False
+              TextSettings.Font.Size = 25.000000000000000000
+              Text = 'Editar Pessoa'
+              TabOrder = 0
+            end
+          end
+          object lyt5: TLayout
+            Align = Top
+            Margins.Top = 20.000000000000000000
+            Position.Y = 80.000000000000000000
+            Size.Width = 238.000000000000000000
+            Size.Height = 60.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 5
+          end
+          object lyt9: TLayout
+            Align = Top
+            Margins.Top = 20.000000000000000000
+            Position.Y = 412.000000000000000000
+            Size.Width = 238.000000000000000000
+            Size.Height = 11.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 4
+          end
+          object lyt8: TLayout
+            Align = Top
+            Margins.Top = 20.000000000000000000
+            Position.Y = 320.000000000000000000
+            Size.Width = 238.000000000000000000
+            Size.Height = 72.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 3
+          end
+          object lyt7: TLayout
+            Align = Top
+            Margins.Top = 20.000000000000000000
+            Position.Y = 240.000000000000000000
+            Size.Width = 238.000000000000000000
+            Size.Height = 60.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 2
+          end
+          object lyt6: TLayout
+            Align = Top
+            Margins.Top = 20.000000000000000000
+            Position.Y = 160.000000000000000000
+            Size.Width = 238.000000000000000000
+            Size.Height = 60.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 1
+          end
+        end
+      end
+      object shdwfct1: TShadowEffect
+        Distance = 3.000000000000000000
+        Direction = 45.000000000000000000
+        Softness = 0.300000011920929000
+        Opacity = 0.200000002980232200
+        ShadowColor = claBlack
+      end
+    end
+  end
+end

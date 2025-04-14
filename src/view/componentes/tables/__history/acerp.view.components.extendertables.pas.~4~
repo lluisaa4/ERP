@@ -1,0 +1,78 @@
+unit acerp.view.components.extendertables;
+
+interface
+
+uses
+  System.SysUtils,
+  System.Types,
+  System.UITypes,
+  System.Classes,
+  System.Variants,
+  FMX.Types,
+  FMX.Graphics,
+  FMX.Controls,
+  FMX.Forms,
+  FMX.Dialogs,
+  FMX.StdCtrls,
+  FMX.Layouts,
+  FMX.Objects, FMX.Ani, FMX.Controls.Presentation, FMX.Effects;
+
+type
+  TComponentExtendedTables = class(TFrame)
+    lytContainer: TLayout;
+    rctnglBackground: TRectangle;
+    shdwfct1: TShadowEffect;
+    lyt1: TLayout;
+    Label1: TLabel;
+    lytTable: TLayout;
+    Z: TVertScrollBox;
+    lytTitulos: TLayout;
+    Label2: TLabel;
+    Label3: TLabel;
+    Label4: TLabel;
+    Label5: TLabel;
+    Label6: TLabel;
+    Label7: TLabel;
+    FloatAnimation1: TFloatAnimation;
+  private
+
+  public
+    class function New(AOwner: TComponent): TComponentExtendedTables;
+    function Nome(Value: string): TComponentExtendedTables;
+    function ColorTitulo(Value: TAlphaColor): TComponentExtendedTables;
+    function Build: TFmxObject;
+  end;
+
+implementation
+
+{$R *.fmx}
+
+{ TComponentExtendedTables }
+
+function TComponentExtendedTables.Build: TFmxObject;
+begin
+  Result := lytContainer;
+end;
+
+function TComponentExtendedTables.ColorTitulo(
+  Value: TAlphaColor): TComponentExtendedTables;
+begin
+  Result := Self;
+  for var I := 0 to Pred(ComponentCount) do
+    if Components[I] is TLabel and (not TLabel(Components[I]).Text.Equals('Simples Exanple')) then
+      TLabel(Components[I]).TextSettings.FontColor := Value;
+end;
+
+class function TComponentExtendedTables.New(
+  AOwner: TComponent): TComponentExtendedTables;
+begin
+  Result := Self.Create(AOwner);
+end;
+
+function TComponentExtendedTables.Nome(Value: string): TComponentExtendedTables;
+begin
+  Result := Self;
+  Self.Name := Value;
+end;
+
+end.

@@ -1,0 +1,44 @@
+unit acerp.view.componentes.cardsgraficos2;
+
+interface
+
+uses
+  System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
+  FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.Objects,
+  FMX.Controls.Presentation, FMX.StdCtrls, FMX.Layouts;
+
+type
+  TComponentCardGraficos2 = class(TForm)
+    lytContainer: TLayout;
+    rectangleBackground: TRectangle;
+    lytTitulos: TLayout;
+    lyt1: TLayout;
+    lblTitulo: TLabel;
+    lyt2: TLayout;
+    rctngl1: TRectangle;
+    lblInfo: TLabel;
+    lytRodape: TLayout;
+    ln1: TLine;
+    lyt3: TLayout;
+    crcl1: TCircle;
+    imageRodape: TImage;
+    lytRodapeTItulo: TLayout;
+    lblTituloRodape: TLabel;
+    lytGraficosPadding: TLayout;
+    lytGraficos: TLayout;
+    lytTituloGrafico: TLayout;
+    lblTituloGrafico: TLabel;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  ComponentCardGraficos2: TComponentCardGraficos2;
+
+implementation
+
+{$R *.fmx}
+
+end.

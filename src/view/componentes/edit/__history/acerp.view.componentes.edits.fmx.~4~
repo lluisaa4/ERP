@@ -1,0 +1,54 @@
+object ComponentEdit: TComponentEdit
+  Size.Width = 320.000000000000000000
+  Size.Height = 60.000000000000000000
+  Size.PlatformDefault = False
+  object lytContainer: TLayout
+    Align = Client
+    Size.Width = 320.000000000000000000
+    Size.Height = 60.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object lblTitulo: TLabel
+      Align = Top
+      StyledSettings = [Family, Style]
+      Size.Width = 320.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Size = 13.000000000000000000
+      Text = 'lblTitulo'
+      TabOrder = 0
+    end
+    object rctngl1: TRectangle
+      Align = Client
+      Fill.Color = claNull
+      Padding.Left = 10.000000000000000000
+      Padding.Top = 10.000000000000000000
+      Padding.Right = 10.000000000000000000
+      Padding.Bottom = 10.000000000000000000
+      Size.Width = 320.000000000000000000
+      Size.Height = 43.000000000000000000
+      Size.PlatformDefault = False
+      Stroke.Color = claGray
+      XRadius = 5.000000000000000000
+      YRadius = 5.000000000000000000
+      object edt1: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Align = Client
+        StyleLookup = 'transparentedit'
+        TabOrder = 0
+        TextSettings.Font.Size = 15.000000000000000000
+        Size.Width = 300.000000000000000000
+        Size.Height = 23.000000000000000000
+        Size.PlatformDefault = False
+        StyledSettings = [Family, Style, FontColor]
+      end
+    end
+    object shdwfct1: TShadowEffect
+      Distance = 3.000000000000000000
+      Direction = 45.000000000000000000
+      Softness = 0.300000011920929000
+      Opacity = 0.300000011920929000
+      ShadowColor = claBlack
+    end
+  end
+end

@@ -1,0 +1,11 @@
+unit acerp.view.components.interfaces;
+
+interface
+
+type
+  iEdits = interface;
+    function Nome(Value: string): iEdits;
+
+implementation
+
+end.

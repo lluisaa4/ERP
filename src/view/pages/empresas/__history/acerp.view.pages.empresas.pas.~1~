@@ -1,0 +1,103 @@
+unit acerp.view.pages.empresas;
+
+interface
+
+uses
+  System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
+  FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.Effects,
+  FMX.Objects, FMX.Controls.Presentation, FMX.StdCtrls, FMX.Layouts;
+
+type
+  TPageEmpresa = class(TForm)
+    lytContainer: TLayout;
+    lyt1: TLayout;
+    rctngl2: TRectangle;
+    lyt4: TLayout;
+    lytInfoPerfil: TLayout;
+    lyt15: TLayout;
+    lyt2323: TLayout;
+    lytUsed: TLayout;
+    Label4: TLabel;
+    Label5: TLabel;
+    lytFiles: TLayout;
+    Label2: TLabel;
+    Label3: TLabel;
+    lytSpent: TLayout;
+    Label6: TLabel;
+    Label7: TLabel;
+    lyt11: TLayout;
+    lytPerfil: TLayout;
+    lytImagePerfil: TLayout;
+    ImagePerfil: TImage;
+    lyt12: TLayout;
+    lytNome: TLayout;
+    lblNome: TLabel;
+    lytUser: TLayout;
+    lblUser: TLabel;
+    lytDescricao: TLayout;
+    lblDescricao: TLabel;
+    ln1: TLine;
+    lytImageCapa: TLayout;
+    imageCapa: TImage;
+    lyt10: TLayout;
+    rctngl3: TRectangle;
+    lytTItulo: TLayout;
+    lblTeamMembers: TLabel;
+    lytTeamMembers: TLayout;
+    lytMember1: TLayout;
+    rctFoto1: TRectangle;
+    img1: TImage;
+    lyt16: TLayout;
+    lytIcone1: TLayout;
+    rctIcone1: TRectangle;
+    imgIcone1: TImage;
+    lytInfos: TLayout;
+    lblNome1: TLabel;
+    lblStatus1: TLabel;
+    lytContainerMember2e3: TLayout;
+    lytMember2: TLayout;
+    rctFoto2: TRectangle;
+    img2: TImage;
+    Layout3: TLayout;
+    Layout4: TLayout;
+    Rectangle2: TRectangle;
+    imgIcone2: TImage;
+    Layout5: TLayout;
+    lblNome2: TLabel;
+    lblStatus2: TLabel;
+    lytContainerMember3: TLayout;
+    lytMember3: TLayout;
+    Rectangle3: TRectangle;
+    img3: TImage;
+    Layout7: TLayout;
+    Layout8: TLayout;
+    Rectangle4: TRectangle;
+    imgIcone3: TImage;
+    Layout9: TLayout;
+    lblNome3: TLabel;
+    lblStatus3: TLabel;
+    lyt2: TLayout;
+    rctngl1: TRectangle;
+    layout1: TLayout;
+    lyt3: TLayout;
+    Label1: TLabel;
+    lyt5: TLayout;
+    lyt9: TLayout;
+    lyt8: TLayout;
+    lyt7: TLayout;
+    lyt6: TLayout;
+    shdwfct1: TShadowEffect;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  PageEmpresa: TPageEmpresa;
+
+implementation
+
+{$R *.fmx}
+
+end.

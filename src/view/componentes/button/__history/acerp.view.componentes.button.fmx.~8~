@@ -1,0 +1,111 @@
+object ComponentButton: TComponentButton
+  Size.Width = 329.000000000000000000
+  Size.Height = 59.000000000000000000
+  Size.PlatformDefault = False
+  object lytContainer: TLayout
+    Align = Top
+    Size.Width = 329.000000000000000000
+    Size.Height = 60.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object lyt1: TLayout
+      Align = Top
+      Padding.Left = 20.000000000000000000
+      Padding.Top = 10.000000000000000000
+      Padding.Right = 20.000000000000000000
+      Padding.Bottom = 10.000000000000000000
+      Size.Width = 329.000000000000000000
+      Size.Height = 60.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      object lyt2: TLayout
+        Align = Client
+        Size.Width = 289.000000000000000000
+        Size.Height = 40.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        object lytImageInfo: TLayout
+          Align = Left
+          Padding.Left = 5.000000000000000000
+          Padding.Top = 5.000000000000000000
+          Padding.Right = 5.000000000000000000
+          Padding.Bottom = 5.000000000000000000
+          Size.Width = 40.000000000000000000
+          Size.Height = 40.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          object imageInfo: TImage
+            MultiResBitmap = <
+              item
+              end>
+            Align = Client
+            Size.Width = 30.000000000000000000
+            Size.Height = 30.000000000000000000
+            Size.PlatformDefault = False
+          end
+        end
+        object lytImageMenu: TLayout
+          Align = Right
+          Padding.Left = 15.000000000000000000
+          Padding.Top = 15.000000000000000000
+          Padding.Right = 15.000000000000000000
+          Padding.Bottom = 15.000000000000000000
+          Position.X = 249.000000000000000000
+          Size.Width = 40.000000000000000000
+          Size.Height = 40.000000000000000000
+          Size.PlatformDefault = False
+          Visible = False
+          TabOrder = 1
+          OnClick = lytImageMenuClick
+          object imageMenu: TImage
+            MultiResBitmap = <
+              item
+              end>
+            Align = Client
+            Size.Width = 10.000000000000000000
+            Size.Height = 10.000000000000000000
+            Size.PlatformDefault = False
+          end
+        end
+        object lytDescricao: TLayout
+          Align = Client
+          Padding.Left = 10.000000000000000000
+          Padding.Top = 10.000000000000000000
+          Padding.Right = 10.000000000000000000
+          Padding.Bottom = 10.000000000000000000
+          Size.Width = 249.000000000000000000
+          Size.Height = 40.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 2
+          object lblDescricao: TLabel
+            Align = Client
+            StyledSettings = [Family, Style]
+            Size.Width = 229.000000000000000000
+            Size.Height = 20.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 13.000000000000000000
+            Text = 'TLista de Descricao'
+            TabOrder = 0
+          end
+        end
+      end
+      object lytButton: TLayout
+        Align = Contents
+        HitTest = True
+        Size.Width = 329.000000000000000000
+        Size.Height = 60.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        OnResized = lytButtonResized
+      end
+    end
+    object lytSubMenu: TLayout
+      Align = Client
+      Size.Width = 329.000000000000000000
+      Size.Height = 0.000000000000000000
+      Size.PlatformDefault = False
+      Visible = False
+      TabOrder = 1
+    end
+  end
+end

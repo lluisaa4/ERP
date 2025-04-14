@@ -1,0 +1,12 @@
+object ComponentCard: TComponentCard
+  Size.Width = 239.000000000000000000
+  Size.Height = 143.000000000000000000
+  Size.PlatformDefault = False
+  object lytContainer: TLayout
+    Align = Client
+    Size.Width = 239.000000000000000000
+    Size.Height = 143.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+  end
+end

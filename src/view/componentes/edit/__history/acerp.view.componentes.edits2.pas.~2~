@@ -1,0 +1,154 @@
+unit acerp.view.componentes.edits2;
+
+interface
+
+uses
+  System.SysUtils,
+  System.Types,
+  System.UITypes,
+  System.Classes,
+  System.Variants,
+  FMX.Types,
+  FMX.Controls,
+  FMX.Forms,
+  FMX.Graphics,
+  FMX.Dialogs,
+  acerp.view.components.interfaces, FMX.Edit, FMX.Objects,
+  FMX.Controls.Presentation, FMX.StdCtrls, FMX.Layouts;
+
+type
+  TComponentEdit2 = class(TForm, iEdits)
+    lytContainer: TLayout;
+    lblTitulo: TLabel;
+    rctngl1: TRectangle;
+    edtText: TEdit;
+  private
+    FChange: TProc<TObject>;
+  public
+    function Nome(Value: string): iEdits;
+    function Text(Value: string): iEdits;
+    function FontColor(Value: TAlphaColor = $FFFFFFFF): iEdits;
+    function BackGroundColor(Value: TAlphaColor = $FFFFFFFF): iEdits;
+    function Enable(Value: Boolean = False): iEdits;
+    function Change(Value: TProc<TObject>): iEdits;
+    function Alinhamento(Value: TAlignLayout): iEdits;
+    function VertText(Value: TTextAlign): iEdits;
+    function HorzText(Value: TTextAlign): iEdits;
+    function Altura(Value: Integer): iEdits; ////
+    function Largura(Value: Integer): iEdits;
+    function Margem(Value: TEditMargins): iEdits;
+    function Titulo(Value: string): iEdits;
+    function FontColorTitulo(Value: TAlphaColor = $FFE3E3E3): iEdits;
+    function PlaceHolder(Value: string): iEdits;
+    function Image(Value: string): iEdits;
+    function ImageColor(Value: TAlphaColor): iEdits;
+    function Password(Value: Boolean): iEdits;
+    function Build: TFMXObject;
+  end;
+  { TComponentEdit2 }
+
+function TComponentEdit2.Alinhamento(Value: TAlignLayout): iEdits;
+begin
+
+end;
+
+function TComponentEdit2.Altura(Value: Integer): iEdits;
+begin
+
+end;
+
+function TComponentEdit2.BackGroundColor(Value: TAlphaColor): iEdits;
+begin
+
+end;
+
+function TComponentEdit2.Build: TFMXObject;
+begin
+
+end;
+
+function TComponentEdit2.Change(Value: TProc<TObject>): iEdits;
+begin
+
+end;
+
+function TComponentEdit2.Enable(Value: Boolean): iEdits;
+begin
+
+end;
+
+function TComponentEdit2.FontColor(Value: TAlphaColor): iEdits;
+begin
+
+end;
+
+function TComponentEdit2.FontColorTitulo(Value: TAlphaColor): iEdits;
+begin
+
+end;
+
+function TComponentEdit2.HorzText(Value: TTextAlign): iEdits;
+begin
+
+end;
+
+function TComponentEdit2.Image(Value: string): iEdits;
+begin
+
+end;
+
+function TComponentEdit2.ImageColor(Value: TAlphaColor): iEdits;
+begin
+
+end;
+
+function TComponentEdit2.Largura(Value: Integer): iEdits;
+begin
+
+end;
+
+function TComponentEdit2.Margem(Value: TEditMargins): iEdits;
+begin
+
+end;
+
+function TComponentEdit2.Nome(Value: string): iEdits;
+begin
+
+end;
+
+function TComponentEdit2.Password(Value: Boolean): iEdits;
+begin
+
+end;
+
+function TComponentEdit2.PlaceHolder(Value: string): iEdits;
+begin
+
+end;
+
+function TComponentEdit2.Text(Value: string): iEdits;
+begin
+
+end;
+
+function TComponentEdit2.Titulo(Value: string): iEdits;
+begin
+
+end;
+
+function TComponentEdit2.VertText(Value: TTextAlign): iEdits;
+begin
+
+end;
+
+end;
+
+var
+  ComponentEdit2: TComponentEdit2;
+
+implementation
+
+{$R *.fmx}
+
+end.

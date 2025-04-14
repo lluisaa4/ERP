@@ -1,0 +1,65 @@
+unit acerp.resources.impl.conexaofiredac;
+
+interface
+
+uses
+  System.SysUtils,
+  Data.DB,
+  FireDAC.Comp.Client,
+  acerp.resources.interfaces,
+  acerp.resources.impl.configuracao;
+
+type
+  TConexaoFiredac = class(TInterfacedObject, iConexao)
+  private
+    FConf: iConfiguracao;
+    FConn: TFDConnection;
+
+
+    constructor Create;
+    destructor Destroy; override;
+  public
+    class function New: iConexao;
+    function Connect: TCustomConnection;
+  end;
+
+implementation
+
+{ TConexao }
+
+function TConexaoFiredac.Connect: TCustomConnection;
+begin
+  Result := FConn;
+end;
+
+constructor TConexaoFiredac.Create;
+begin
+  FConf := TConfiguracao.New;
+  FConn := TFDConnection.Create(nil);
+  try
+    FConn.Params.DriverID := FConf.DriverID;
+    FConn.Params.Database := FConf.DataBase;
+    FConn.Params.UserName := FConf.UserName;
+    FConn.Params.Password := FConf.Password;
+    FConn.Params.Add('Server='+FConf.Server);
+    FConn.Params.Add('Port='+FConf.Port);
+    FConn.Params.Add('LockinMode='+FConf.Locking);
+
+    FConn.Connected := True;
+  finally
+    raise Exception.Create('Error Message');
+  end;
+end;
+
+destructor TConexaoFiredac.Destroy;
+begin
+  FConn.Free;
+  inherited;
+end;
+
+class function TConexaoFiredac.New: iConexao;
+begin
+  Result := Self.Create;
+end;
+
+end.

@@ -1,0 +1,163 @@
+object Z: TZ
+  Size.Width = 887.000000000000000000
+  Size.Height = 592.000000000000000000
+  Size.PlatformDefault = False
+  object lytContainer: TLayout
+    Align = Client
+    Padding.Left = 10.000000000000000000
+    Padding.Top = 10.000000000000000000
+    Padding.Right = 10.000000000000000000
+    Padding.Bottom = 10.000000000000000000
+    Size.Width = 887.000000000000000000
+    Size.Height = 592.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object rctnglBackground: TRectangle
+      Align = Client
+      Fill.Color = claWhite
+      Padding.Left = 10.000000000000000000
+      Padding.Top = 10.000000000000000000
+      Padding.Right = 10.000000000000000000
+      Padding.Bottom = 10.000000000000000000
+      Size.Width = 867.000000000000000000
+      Size.Height = 572.000000000000000000
+      Size.PlatformDefault = False
+      Stroke.Kind = None
+      XRadius = 10.000000000000000000
+      YRadius = 10.000000000000000000
+      object lyt1: TLayout
+        Align = Top
+        Position.X = 10.000000000000000000
+        Position.Y = 10.000000000000000000
+        Size.Width = 847.000000000000000000
+        Size.Height = 50.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        object Label1: TLabel
+          Align = Client
+          StyledSettings = [Family, Style, FontColor]
+          Size.Width = 847.000000000000000000
+          Size.Height = 50.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Size = 25.000000000000000000
+          Text = 'Simple Table'
+          TabOrder = 0
+        end
+      end
+      object shdwfct1: TShadowEffect
+        Distance = 2.000000000000000000
+        Direction = 45.000000000000000000
+        Softness = 0.200000002980232200
+        Opacity = 0.600000023841857900
+        ShadowColor = claBlack
+      end
+      object lytTable: TLayout
+        Align = Client
+        Padding.Left = 10.000000000000000000
+        Padding.Right = 10.000000000000000000
+        Size.Width = 847.000000000000000000
+        Size.Height = 502.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        object Z: TVertScrollBox
+          Align = Client
+          Size.Width = 827.000000000000000000
+          Size.Height = 452.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          Viewport.Width = 827.000000000000000000
+          Viewport.Height = 452.000000000000000000
+          object FloatAnimation1: TFloatAnimation
+            Duration = 0.200000002980232200
+            PropertyName = 'Width'
+            StartValue = 0.000000000000000000
+            StopValue = 0.000000000000000000
+          end
+        end
+        object lytTitulos: TLayout
+          Align = Top
+          Position.X = 10.000000000000000000
+          Size.Width = 827.000000000000000000
+          Size.Height = 50.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 1
+          object Label2: TLabel
+            Align = Left
+            StyledSettings = [Family, Style, FontColor]
+            Margins.Left = 10.000000000000000000
+            Position.X = 10.000000000000000000
+            Size.Width = 70.000000000000000000
+            Size.Height = 50.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 15.000000000000000000
+            Text = '#'
+            TabOrder = 5
+          end
+          object Label3: TLabel
+            Align = Right
+            StyledSettings = [Family, Style, FontColor]
+            Margins.Left = 10.000000000000000000
+            Position.X = 577.000000000000000000
+            Size.Width = 120.000000000000000000
+            Size.Height = 50.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 15.000000000000000000
+            TextSettings.HorzAlign = Center
+            Text = 'Sal'#225'rio '
+            TabOrder = 4
+          end
+          object Label4: TLabel
+            Align = Right
+            StyledSettings = [Family, Style, FontColor]
+            Margins.Left = 10.000000000000000000
+            Position.X = 297.000000000000000000
+            Size.Width = 80.000000000000000000
+            Size.Height = 50.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 15.000000000000000000
+            TextSettings.HorzAlign = Center
+            Text = 'Desde'
+            TabOrder = 2
+          end
+          object Label5: TLabel
+            Align = Right
+            StyledSettings = [Family, Style, FontColor]
+            Margins.Left = 10.000000000000000000
+            Position.X = 387.000000000000000000
+            Size.Width = 180.000000000000000000
+            Size.Height = 50.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 15.000000000000000000
+            TextSettings.HorzAlign = Center
+            Text = 'Cargo'
+            TabOrder = 1
+          end
+          object Label6: TLabel
+            Align = Client
+            StyledSettings = [Family, Style, FontColor]
+            Margins.Left = 10.000000000000000000
+            Size.Width = 197.000000000000000000
+            Size.Height = 50.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 15.000000000000000000
+            Text = 'Nome'
+            TabOrder = 0
+          end
+          object Label7: TLabel
+            Align = Right
+            StyledSettings = [Family, Style, FontColor]
+            Margins.Left = 10.000000000000000000
+            Position.X = 707.000000000000000000
+            Size.Width = 120.000000000000000000
+            Size.Height = 50.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 15.000000000000000000
+            TextSettings.HorzAlign = Center
+            Text = 'A'#231#227'o'
+            TabOrder = 3
+          end
+        end
+      end
+    end
+  end
+end
