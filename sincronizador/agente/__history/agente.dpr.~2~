@@ -1,0 +1,14 @@
+program agente;
+
+uses
+  Vcl.Forms,
+  Unit2 in 'Unit2.pas' {Agente};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TAgente, Agente);
+  Application.Run;
+end.

@@ -14,7 +14,7 @@ uses
   FMX.Graphics,
   FMX.Dialogs,
   FMX.Layouts,
-  Router4D.Interfaces;
+  Router4D.Interfaces; //pra usar nas rotas das telas
 
 
 type
@@ -23,10 +23,11 @@ type
     lytCards: TLayout;
     lytCardLeft: TLayout;
     lytCardRight: TLayout;
-    lytGraficos: TFlowLayout;
-    procedure lytCardsResize(Sender: TObject);
-    procedure lytCardLeftResize(Sender: TObject);
-    procedure lytCardRightResize(Sender: TObject);
+    lytGraficos: TFlowLayout; //organiza graficos dinamicamente
+    //pra quando o tamanho do componente muda essas embaixo
+    procedure lytCardsResize(Sender: TObject); //metade do container principal
+    procedure lytCardLeftResize(Sender: TObject); //ajusta os cards internos para dividirem igualmente o espaço disponível
+    procedure lytCardRightResize(Sender: TObject); //ajusta os cards internos para dividirem igualmente o espaço disponível
   private
     procedure CarregaCards;
     procedure CarregaGraficos;
@@ -42,7 +43,8 @@ implementation
 uses
   acerp.services.enums,
   acerp.view.componentes.cardsgraficos,
-  acerp.view.componentes.cards, acerp.view.componentes.cardsgraficos2;
+  acerp.view.componentes.cards,
+  acerp.view.componentes.cardsgraficos2;
 
 {$R *.fmx}
 
@@ -119,7 +121,7 @@ begin
       .ImagemRodape('mais')
       .Alinhamento(TAlignLayout.Left)
       .TipoGrafico(TChartType.Lines)
-      .MargemRight(25)
+      .MargemRight(50)
       .Largura(387,400)
       .Build);
 
@@ -132,7 +134,7 @@ begin
       .ImagemRodape('mais')
       .Alinhamento(TAlignLayout.Left)
       .TipoGrafico(TChartType.Lines)
-      .MargemRight(25)
+      .MargemRight(50)
       .Largura(387,400)
       .Build);
 

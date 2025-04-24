@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{15F2AFD7-35B1-4434-9C76-D7519909C2B6}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="agente.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="..\sincronizador\sincronizador.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="agente">
+        <MSBuild Projects="agente.dproj"/>
+    </Target>
+    <Target Name="agente:Clean">
+        <MSBuild Projects="agente.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="agente:Make">
+        <MSBuild Projects="agente.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="sincronizador">
+        <MSBuild Projects="..\sincronizador\sincronizador.dproj"/>
+    </Target>
+    <Target Name="sincronizador:Clean">
+        <MSBuild Projects="..\sincronizador\sincronizador.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="sincronizador:Make">
+        <MSBuild Projects="..\sincronizador\sincronizador.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="agente;sincronizador"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="agente:Clean;sincronizador:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="agente:Make;sincronizador:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

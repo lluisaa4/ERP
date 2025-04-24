@@ -1,0 +1,14 @@
+program sincronizador;
+
+uses
+  Vcl.Forms,
+  Unit3 in 'Unit3.pas' {Agente};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TAgente, Agente);
+  Application.Run;
+end.

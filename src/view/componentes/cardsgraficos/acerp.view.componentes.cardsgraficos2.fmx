@@ -154,7 +154,7 @@ object ComponentCardGraficos2: TComponentCardGraficos2
       object lytGraficosPadding: TLayout
         Align = Client
         Padding.Left = 10.000000000000000000
-        Padding.Right = 10.000000000000000000
+        Padding.Right = 30.000000000000000000
         Padding.Bottom = 85.000000000000000000
         Size.Width = 380.000000000000000000
         Size.Height = 247.000000000000000000
@@ -162,7 +162,7 @@ object ComponentCardGraficos2: TComponentCardGraficos2
         TabOrder = 2
         object lytGraficos: TLayout
           Align = Client
-          Size.Width = 360.000000000000000000
+          Size.Width = 340.000000000000000000
           Size.Height = 162.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 1

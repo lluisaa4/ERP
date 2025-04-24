@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2025/02/19 08:09:43.000.217,=C:\Users\Lmartins\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2025/02/27 15:50:39.000.644,=C:\Users\Lmartins\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2025/04/15 08:08:03.000.252,=C:\Users\Lmartins\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2025/04/15 08:08:10.000.785,C:\Users\Lmartins\Documents\Embarcadero\Studio\Projects\agente.dproj=C:\Users\Lmartins\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2025/04/15 08:11:02.000.685,C:\dev\estudos\ac-erp\sincronizador\agente\Unit2.dfm=C:\Users\Lmartins\Documents\Embarcadero\Studio\Projects\Unit2.dfm</Transaction>
+    <Transaction>2025/04/15 08:11:02.000.685,C:\dev\estudos\ac-erp\sincronizador\agente\Unit2.pas=C:\Users\Lmartins\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2025/04/15 08:11:07.000.873,C:\dev\estudos\ac-erp\sincronizador\agente\agente.dproj=C:\Users\Lmartins\Documents\Embarcadero\Studio\Projects\agente.dproj</Transaction>
+    <Transaction>2025/04/15 08:47:15.000.281,=C:\dev\estudos\ac-erp\sincronizador\sincronizador\Unit3.pas</Transaction>
+    <Transaction>2025/04/15 08:47:37.000.431,=C:\dev\estudos\ac-erp\sincronizador\agente\Unit1.pas</Transaction>
+    <Transaction>2025/04/15 08:49:50.000.084,C:\dev\estudos\ac-erp\sincronizador\agente\Unit2.pas=</Transaction>
+    <Transaction>2025/04/15 08:50:21.000.144,C:\dev\estudos\ac-erp\sincronizador\sincronizador\Unit3.pas=</Transaction>
+    <Transaction>2025/04/15 08:55:33.000.688,=C:\dev\estudos\ac-erp\sincronizador\agente\Unit3.pas</Transaction>
+    <Transaction>2025/04/15 09:01:00.000.350,C:\dev\estudos\ac-erp\sincronizador\agente\Unit1.pas=</Transaction>
+    <Transaction>2025/04/15 09:01:30.000.484,C:\dev\estudos\ac-erp\sincronizador\agente\Unit3.dfm=C:\dev\estudos\ac-erp\sincronizador\agente\Unit1.dfm</Transaction>
+    <Transaction>2025/04/15 09:01:30.000.484,C:\dev\estudos\ac-erp\sincronizador\agente\Unit3.pas=C:\dev\estudos\ac-erp\sincronizador\agente\Unit1.pas</Transaction>
+  </Transactions>
+	<ProjectSortOrder AutoSort="0" SortType="0">
+    <File Path="Unit1.pas"/>
+    <File Path="Unit1.dfm"/>
+  </ProjectSortOrder>
+</BorlandProject>
